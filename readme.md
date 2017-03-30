@@ -35,3 +35,20 @@ Install the package and before rebooting do the following:
 * Once you have pressed enter, you will be prompted you for your password.
 * Once done, restart your computer.
 
+### Links
+
+#### Projects
+
+[arduino projecthub](https://create.arduino.cc/projecthub)
+
+[luckyresistor](https://luckyresistor.me/)
+
+[allaboutcircuits](https://www.allaboutcircuits.com/)
+
+[hackster](https://www.hackster.io/)
+
+#### LCD
+
+[u8g2 library](https://github.com/olikraus/u8g2)
+
+
