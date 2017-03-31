@@ -16,7 +16,7 @@ CH340 USB to Serial chip drivers it can be found here:
 
 or in the drivers folder.
 
-Some detailed instructions can be found here
+Some detailed instructions can be found here:
 
 [nstructables](https://www.instructables.com/id/Arduino-Nano-CH340/)
 
@@ -35,9 +35,23 @@ Install the package and before rebooting do the following:
 * Once you have pressed enter, you will be prompted you for your password.
 * Once done, restart your computer.
 
+## For Mac OS X Sierra
+
+Use ch340g-ch34g-ch34x-mac-os-x-driver.zip located in the driver folder.
+
+For more information:
+
+[Visit MPParsley's github](https://github.com/MPParsley/ch340g-ch34g-ch34x-mac-os-x-driver)
+
+
 ### Links
 
 #### Projects
+
+[arduino.cc](http://www.arduino.cc/)
+
+[arduino.org](http://www.arduino.org/)
+
 
 [arduino projecthub](https://create.arduino.cc/projecthub)
 
