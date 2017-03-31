@@ -48,26 +48,22 @@ For more information:
 
 #### Projects
 
-[arduino.cc](http://www.arduino.cc/)
-
-[arduino.org](http://www.arduino.org/)
-
-[fritzing.org](http://fritzing.org/home/)
-
-[adafruit](https://learn.adafruit.com/category/learn-arduino)
-
-
-[arduino projecthub](https://create.arduino.cc/projecthub)
-
-[luckyresistor](https://luckyresistor.me/)
-
-[allaboutcircuits](https://www.allaboutcircuits.com/)
-
-[hackster](https://www.hackster.io/)
+* [arduino.cc](http://www.arduino.cc/)
+* [arduino.org](http://www.arduino.org/)
+* [fritzing.org](http://fritzing.org/home/)
+* [Adafruit](https://learn.adafruit.com/category/learn-arduino)
+* [Arduino projecthub](https://create.arduino.cc/projecthub)
+* [luckyresistor](https://luckyresistor.me/)
+* [allaboutcircuits](https://www.allaboutcircuits.com/)
+* [hackster](https://www.hackster.io/)
 
 #### LCD
 
-[u8g2 library](https://github.com/olikraus/u8g2)
+* [u8g2 library](https://github.com/olikraus/u8g2)
+
+#### Fritzing
+
+* [Adafruit](https://github.com/adafruit/Fritzing-Library)
 
 p.s:
 I **LOVE** coffee! Buy me a coffee at:   
