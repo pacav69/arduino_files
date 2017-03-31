@@ -66,3 +66,5 @@ For more information:
 [u8g2 library](https://github.com/olikraus/u8g2)
 
 
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](pacav69@gmail.com)
