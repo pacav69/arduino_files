@@ -52,6 +52,10 @@ For more information:
 
 [arduino.org](http://www.arduino.org/)
 
+[fritzing.org](http://fritzing.org/home/)
+
+[adafruit](https://learn.adafruit.com/category/learn-arduino)
+
 
 [arduino projecthub](https://create.arduino.cc/projecthub)
 
