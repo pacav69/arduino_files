@@ -56,6 +56,7 @@ For more information:
 * [luckyresistor](https://luckyresistor.me/)
 * [allaboutcircuits](https://www.allaboutcircuits.com/)
 * [hackster](https://www.hackster.io/)
+* [makezine.com](http://makezine.com/2015/12/04/admittedly-simplistic-guide-raspberry-pi-vs-arduino/)
 
 #### LCD
 
