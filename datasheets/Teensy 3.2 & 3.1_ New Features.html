@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0041)https://www.pjrc.com/teensy/teensy31.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Teensy 3.2 &amp; 3.1: New Features</title>
+<!--<base target="_top">--><base href="." target="_top">
+<link rel="shortcut icon" href="https://www.pjrc.com/favicon.ico">
+<link rel="icon" href="https://www.pjrc.com/favicon.ico">
+<link rel="stylesheet" href="./Teensy 3.2 &amp; 3.1_ New Features_files/style.css" type="text/css">
+<link rel="stylesheet" href="./Teensy 3.2 &amp; 3.1_ New Features_files/td_libs.css" type="text/css">
+<meta name="MSSmartTagsPreventParsing" content="TRUE">
+<style type="text/css"><!--
+span.literal {color: #cc0000}
+span.comment {color: #777755}
+span.keyword {color: #cc6600}
+span.function {color: #996600}
+span.mainfunction {color: #993300; font-weight: bolder}
+--></style>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#0000D0" vlink="#202080">
+<!--nav begin-->
+<!--htdig_noindex-->
+<table width="100%" cellspacing="2" cellpadding="0">
+<tbody><tr><td align="left" rowspan="2">
+<table cellspacing="0" cellpadding="0" width="312">
+<tbody><tr><td align="right">
+<a href="https://www.pjrc.com/teensy/teensy31.html#navend"><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/1x1.gif" width="1" height="10" alt="skip navigational links" border="0" hspace="0" vspace="0"></a><a href="https://www.pjrc.com/"><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/logo.gif" alt="PJRC" width="276" height="31" border="0"></a></td></tr>
+</tbody></table>
+</td><td align="right" valign="top">
+</td></tr>
+<tr><td align="right" valign="bottom">
+<small>
+<a href="https://www.pjrc.com/cgi-bin/store/step1">Shopping&nbsp;Cart</a>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/a.gif" width="10" height="10" alt="" align="middle">
+<a href="https://www.pjrc.com/cgi-bin/store/step2">Checkout</a>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/a.gif" width="10" height="10" alt="" align="middle">
+<a href="https://www.pjrc.com/cgi-bin/store/shipcost">Shipping&nbsp;Cost</a>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/a.gif" width="10" height="10" alt="" align="middle">
+<a href="https://www.pjrc.com/cgi-bin/archive/summary">Download&nbsp;Website</a>
+</small>
+</td></tr></tbody></table>
+<table cellspacing="0" cellpadding="6" border="0" width="100%">
+<tbody><tr bgcolor="#D0E0FF">
+<td align="center"><a href="https://www.pjrc.com/">Home</a></td>
+<td align="center"><a href="https://www.pjrc.com/tech/mp3/">MP3 Player</a></td>
+<td align="center"><a href="https://www.pjrc.com/tech/8051/">8051 Tools</a></td>
+<td align="center"><a href="https://www.pjrc.com/tech/">All Projects</a></td>
+<td align="center"><a href="https://www.pjrc.com/store/">PJRC Store</a></td>
+<td align="center"><a href="https://www.pjrc.com/map.html">Site Map</a></td>
+</tr></tbody></table>
+<table cellspacing="0" cellpadding="2" width="100%">
+<tbody><tr bgcolor="#F0F0F0"><td align="left">
+<small>You are here:
+<a href="https://www.pjrc.com/teensy/">Teensy</a>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/b.gif" width="10" height="10" alt="">
+<a href="https://www.pjrc.com/teensy/techspecs.html">Hardware</a>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/b.gif" width="10" height="10" alt="">
+<span style="background-color: #B0E4A8">Teensy 3.2 / 3.1</span>
+</small></td><td align="right">
+<!-- <small><a href="/search/">Search PJRC</a></small>
+ -->
+</td></tr></tbody></table>
+<p>
+</p><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr><td width="172" valign="top">
+<table width="172" border="0" cellspacing="0" cellpadding="6">
+<tbody><tr><td bgcolor="#D0E0FF" align="center">
+<big><b>PJRC Store</b></big>
+</td></tr>
+<tr><td bgcolor="#F0F0F0">
+<small>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/a.gif" width="10" height="10" alt="" align="middle">
+<a href="https://www.pjrc.com/store/teensy36.html">Teensy 3.6, $29.25</a><br>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/a.gif" width="10" height="10" alt="" align="middle">
+<a href="https://www.pjrc.com/store/teensy35.html">Teensy 3.5, $24.25</a><br>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/a.gif" width="10" height="10" alt="" align="middle">
+<a href="https://www.pjrc.com/store/teensy32.html">Teensy 3.2, $19.80</a><br>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/a.gif" width="10" height="10" alt="" align="middle">
+<a href="https://www.pjrc.com/store/teensylc.html">Teensy LC, $11.65</a><br>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/a.gif" width="10" height="10" alt="" align="middle">
+<a href="https://www.pjrc.com/store/teensy.html">Teensy 2.0, $16.00</a><br>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/a.gif" width="10" height="10" alt="" align="middle">
+<a href="https://www.pjrc.com/store/teensypp.html">Teensy++ 2.0, $24.00</a><br>
+</small></td></tr>
+<tr><td height="15"></td></tr>
+<tr><td bgcolor="#D0E0FF" align="center">
+<big><b>Teensy</b></big>
+</td></tr>
+<tr><td bgcolor="#F0F0F0">
+<small>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/a.gif" width="10" height="10" alt="">
+<a href="https://www.pjrc.com/teensy/index.html">Main Page</a><br>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/b.gif" width="10" height="10" alt="">
+<b>Hardware</b><br>
+</small>
+<div style="padding-left: 1.2em">
+<small>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/a.gif" width="10" height="10" alt="">
+<a href="https://www.pjrc.com/teensy/techspecs.html">Tech Specs</a><br>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/b.gif" width="10" height="10" alt="selected">
+<span style="background-color: #B0E4A8">Teensy 3.2 / 3.1</span><br>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/a.gif" width="10" height="10" alt="">
+<a href="https://www.pjrc.com/teensy/teensyLC.html">Teensy-LC</a><br>
+</small>
+</div>
+<small>
+<a href="https://www.pjrc.com/teensy/first_use.html"><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/c.gif" width="10" height="10" alt="" border="0">
+<b>Getting Started</b></a><br>
+<a href="https://www.pjrc.com/teensy/pins.html"><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/c.gif" width="10" height="10" alt="" border="0">
+<b>How-To Tips</b></a><br>
+<a href="https://www.pjrc.com/teensy/usb_debug_only.html"><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/c.gif" width="10" height="10" alt="" border="0">
+<b>Code Library</b></a><br>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/a.gif" width="10" height="10" alt="">
+<a href="https://www.pjrc.com/teensy/projects.html">Projects</a><br>
+<a href="https://www.pjrc.com/teensy/teensyduino.html"><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/c.gif" width="10" height="10" alt="" border="0">
+<b>Teensyduino</b></a><br>
+<a href="https://www.pjrc.com/teensy/pinout.html"><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/c.gif" width="10" height="10" alt="" border="0">
+<b>Reference</b></a><br>
+</small></td></tr>
+<tr><td height="60"></td></tr>
+</tbody></table><br>
+<a name="navend"> </a>
+</td>
+<td width="18"></td>
+<td valign="top">
+<!--/htdig_noindex-->
+<!--nav end-->
+
+
+<h1>Teensy 3.2 &amp; 3.1 - New Features</h1>
+
+<table width="300" height="400" align="right"><tbody><tr><td>
+
+<center><big><b>Teensy 3.2</b></big></center>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/teensy32_front_small.jpg" align="right"><br>
+<div style="padding-left:16px;"><small>
+Teensy 3.2 has dedicated 3.3V regulator.
+</small></div>
+<p>
+
+</p><center><big><b>Teensy 3.1</b></big></center>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/teensy31_front_small_green.jpg" align="right"><br>
+<div style="padding-left:16px;"><small>
+Teensy 3.1 has gold plating for easier soldering.
+</small></div>
+<p>
+</p><center><big><b>Teensy 3.0</b></big></center>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/teensy30_front_small.jpg" align="right"><br>
+<div style="padding-left:16px;"><small>
+Teensy 3.0 has standard tin plating finish.
+</small></div>
+</td></tr></tbody></table>
+
+Teensy 3.2 and 3.1 have the same size, shape &amp; pinout;
+and are compatible with code written for Teensy 3.0.
+All are well supported on the Arduino IDE using Teensyduino.
+<p>
+Teensy 3.1 adds several new features, due to an upgraded microcontroller.  Here are the highlights.  A
+<a href="https://www.pjrc.com/teensy/teensy31.html#specs">table of technical specifications is show below</a>.
+</p><p>
+Teensy 3.2 adds a more powerful 3.3 volt regulator, with the
+ability to directly power ESP8266 Wifi, WIZ820io Ethernet and
+other power-hungry 3.3V add-on boards.
+
+</p><h2>More Memory For Awesome Projects</h2>
+
+The RAM has quadrupled since 3.0, from 16K to 64K.  While 16K is plenty for nearly all Arduino
+libraries, 64K allows for more advanced applications.  Icons and graphics for color
+displays and audio
+effects requiring delays, like reverb and chorus, will become possible on Teensy 3.2 &amp; 3.1.
+<p>
+Flash memory has also doubled, to 256K, and provides double the memory bandwidth.
+
+</p><h2>5 Volt Tolerance on Digital Inputs</h2>
+
+Today most new chips use 3.3V signals, but many legacy products output 5 volt
+digital signals.  These can now be directly connected to Teensy digital
+inputs.
+<p>
+All digital pins are 5 volt tolerant on Teensy 3.2 &amp; 3.1.  However, the analog-only
+pins (A10-A14), AREF, Program and Reset are 3.3V only.
+
+</p><h2>Update: Color Change Jan 22, 2014</h2>
+
+The color of Teensy 3.1 was changed from black to green on January 22, 2014.
+<p>
+</p><table><tbody><tr><td><center>
+Teensy 3.1<br>
+Before Jan 22<br>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/teensy31_front_small.jpg">
+</center>
+</td>
+<td width="50"></td>
+<td><center>
+Teensy 3.1<br>
+After Jan 22<br>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/teensy31_front_small_green.jpg">
+</center>
+</td></tr></tbody></table>
+<p>
+All Teensy 3.2 boards are green.
+</p><p>
+The green material has slightly higher resolution.  See
+<a href="http://forum.pjrc.com/threads/24950-Teensy-3-1-Changes-To-Green-PCB">this post</a>
+for details.
+
+<br clear="all">
+
+</p><h2><a name="dac">12 Bit Analog Output</a></h2>
+
+Teensy 3.2 &amp; 3.1 have a proper analog output.  You can always filter PWM, but
+true analog output responds rapidly.  The output is created by the
+stable reference voltage, so it's doesn't vary if your power supply
+voltage changes slightly.
+<p>
+
+</p><pre style="padding-left:4em"><span style="color: #7E7E7E;">//&nbsp;Simple&nbsp;DAC&nbsp;sine&nbsp;wave&nbsp;test&nbsp;on&nbsp;Teensy&nbsp;3.1</span>
+
+<span style="color: #CC6600;">float</span> phase = 0.0;
+<span style="color: #CC6600;">float</span> twopi = 3.14159 * 2;
+<span style="color: #CC6600;">elapsedMicros</span> usec = 0;
+
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #CC6600;">analogWriteResolution</span>(12);
+}
+
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>loop</b></span>() {
+&nbsp;&nbsp;<span style="color: #CC6600;">float</span> val = <span style="color: #CC6600;">sin</span>(phase) * 2000.0 + 2050.0;
+&nbsp;&nbsp;<span style="color: #CC6600;">analogWrite</span>(A14, (<span style="color: #CC6600;">int</span>)val);
+&nbsp;&nbsp;phase&nbsp;=&nbsp;phase&nbsp;+&nbsp;0.02;
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (phase &gt;= twopi) phase = 0;
+&nbsp;&nbsp;<span style="color: #CC6600;">while</span> (usec &lt; 500) ; <span style="color: #7E7E7E;">// wait</span>
+&nbsp;&nbsp;usec&nbsp;=&nbsp;usec&nbsp;-&nbsp;500;
+}
+</pre>
+<p>
+Simply use analogWrite() on the A14 pin for true analog output.
+</p><p>
+<img src="./Teensy 3.2 &amp; 3.1_ New Features_files/teensy31_dac.jpg">
+
+</p><h2>Two Analog to Digital Converters</h2>
+
+With analogRead(), you can measure many signals, but only 1 at a time.
+Teensy 3.2 &amp; 3.1 has a second ADC, so you can concurrently measure 2 analog signals.
+For stereo audio or power monitoring, sampling both left and right, or
+voltage and current at the same moment is very beneficial.
+<p>
+<a href="http://forum.pjrc.com/threads/25532-ADC-library-update-now-with-support-for-Teensy-3-1">Pedvide's ADC library</a>
+can be used to access both ADCs.
+</p><p>
+PJRC is developing an advanced analog read function for Arduino,
+to make using these new analog input capabilities very easy.
+
+
+</p><h2>CAN Bus</h2>
+
+Controller Area Network is a communication used in automobiles.
+The <a href="https://github.com/teachop/FlexCAN_Library">FlexCAN library</a>
+(included with the Teensyduino installer) supports use of the CAN controller on Teensy 3.2 &amp; 3.1.
+
+
+<h2><a name="specs">Technical Specifications</a></h2>
+
+
+<p>
+</p><table align="center" width="680" cellspacing="3" cellpadding="6">
+<tbody><tr class="top"><th>Feature</th><th>Teensy 3.0</th><th>Teensy 3.2<br>Teensy 3.1</th><th>Units</th>
+
+</tr><tr class="odd">
+<td>Price</td>
+<td align="center">19.00</td>
+<td align="center">19.80</td>
+<td>US Dollars</td>
+</tr>
+
+<tr class="odd">
+<td>Processor<br>&nbsp;&nbsp;&nbsp;&nbsp;Core<br>&nbsp;&nbsp;&nbsp;&nbsp;Rated Speed<br>&nbsp;&nbsp;&nbsp;&nbsp;Overclockable</td>
+<td align="center"><small>MK20DX128VLH5</small><br>Cortex-M4<br>48<br>96</td>
+<td align="center"><small>MK20DX256VLH7</small><br>Cortex-M4<br>72<br>96</td>
+<td><br><br>MHz<br>MHz</td>
+</tr>
+
+<tr class="odd">
+<td>Flash Memory<br>&nbsp;&nbsp;&nbsp;&nbsp;Bandwidth<br>&nbsp;&nbsp;&nbsp;&nbsp;Cache</td>
+<td align="center">128<br>96<br>32</td>
+<td align="center">256<br>192<br>256</td>
+<td>kbytes<br>Mbytes/sec<br>Bytes</td>
+</tr>
+
+<tr class="odd">
+<td>RAM</td>
+<td align="center">16</td>
+<td align="center">64</td>
+<td>kbytes</td>
+</tr>
+
+<tr class="odd">
+<td>EEPROM</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td>kbytes</td>
+</tr>
+
+<tr class="odd">
+<td>Direct Memory Access</td>
+<td align="center">4</td>
+<td align="center">16</td>
+<td>Channels</td>
+</tr>
+
+<tr class="odd">
+<td>Digital I/O<br>&nbsp;&nbsp;&nbsp;&nbsp;Voltage Output<br>&nbsp;&nbsp;&nbsp;&nbsp;Voltage Input</td>
+<td align="center">34<br>3.3V<br>3.3V Only</td>
+<td align="center">34<br>3.3V<br>5V Tolerant</td>
+<td>Pins<br>Volts<br>Volts</td>
+</tr>
+
+<tr class="odd">
+<td>Analog Input<br>&nbsp;&nbsp;&nbsp;&nbsp;Converters<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resolution<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Usable<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prog Gain Amp<br>&nbsp;&nbsp;&nbsp;&nbsp;Touch Sensing<br>&nbsp;&nbsp;&nbsp;&nbsp;Comparators</td>
+<td align="center">14<br>1<br>16<br>13<br>0<br>12<br>2</td>
+<td align="center">21<br>2<br>16<br>13<br>2<br>12<br>3</td>
+<td>Pins<br><br>Bits<br>Bits<br><br>Pins<br><br></td>
+</tr>
+
+<tr class="odd">
+<td>Analog Output<br>&nbsp;&nbsp;&nbsp;&nbsp;DAC Resolution</td>
+<td align="center">0<br>-</td>
+<td align="center">1<br>12</td>
+<td>Pins<br>Bits</td>
+</tr>
+
+<tr class="odd">
+<td>Timers<br>&nbsp;&nbsp;&nbsp;&nbsp;FTM Type<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PWM Outputs<br>&nbsp;&nbsp;&nbsp;&nbsp;PDB Type<br>&nbsp;&nbsp;&nbsp;&nbsp;CMT (infrared) Type<br>&nbsp;&nbsp;&nbsp;&nbsp;LPTMR Type<br>&nbsp;&nbsp;&nbsp;&nbsp;PIT (interval) Type<br>&nbsp;&nbsp;&nbsp;&nbsp;Systick<br>&nbsp;&nbsp;&nbsp;&nbsp;RTC (date/time) **</td>
+<td align="center">11 Total<br>2<br>10<br>1<br>1<br>1<br>4<br>1<br>1</td>
+<td align="center">12 Total<br>3<br>12<br>1<br>1<br>1<br>4<br>1<br>1</td>
+<td valign="top"><br><br>Pins</td>
+</tr>
+
+<tr class="odd">
+<td>Communication<br>&nbsp;&nbsp;&nbsp;&nbsp;USB<br>&nbsp;&nbsp;&nbsp;&nbsp;Serial<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With FIFOs<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;High Res Baud<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fast Clock<br>&nbsp;&nbsp;&nbsp;&nbsp;SPI<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With FIFOs<br>&nbsp;&nbsp;&nbsp;&nbsp;I2C<br>&nbsp;&nbsp;&nbsp;&nbsp;CAN Bus<br>&nbsp;&nbsp;&nbsp;&nbsp;I2S Audio<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FIFO Size</td>
+<td align="center"><br>1<br>3<br>1<br>3<br>2<br>1<br>1<br>1<br>0<br>1<br>4</td>
+<td align="center"><br>1<br>3<br>2<br>3<br>2<br>1<br>1<br>2<br>1<br>1<br>8</td>
+<td></td>
+</tr>
+
+<tr class="odd">
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+
+<tr class="odd">
+<td colspan="4"><small><a name="rtc">**</a> RTC requires a 32.768 kHz crystal &amp; 3V battery.  See the
+<a href="https://www.pjrc.com/teensy/td_libs_Time.html#teensy3">Time Library</a> for details.</small></td>
+</tr>
+
+</tbody></table>
+
+<h2>Pinouts</h2>
+
+Teensy 3.2 &amp; 3.1 have exactly the same pinout.  Teensy 3.2 provides more power
+on its 3.3V pin, and accepts a wider voltage input range.  If used within Teensy
+3.1 limits, Teensy 3.2 and 3.1 are interchangeable.
+<p>
+Both 3.2 and 3.1 are meant to be a drop-in replacement for Teensy 3.0.  Only 1 pin has
+different functionality.  The reset pin was replaced by A14/DAC, which you can
+use for true analog output, or as another analog input.
+</p><p>
+</p><table align="center"><tbody><tr><th>Teensy 3.0</th><th width="40"></th><th>Teensy 3.1</th><th width="20"></th><th>Teensy 3.2</th></tr>
+<tr><td><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/teensy30_front_pinout.png"></td><td></td><td><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/teensy31_front_pinout.png"></td><td></td><td><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/teensy32_front_pinout.png"></td></tr>
+</tbody></table>
+<p>
+Pins 3 and 4 gained CAN bus functions.
+</p><p>
+Pins 6, 9, 15, and 20-21 can still have SPI chip select capability, but the
+labels were removed to simplify the pinout card.  Currently no libraries use
+the native chip selects.  However, a new SPIFIFO library is in development.
+</p><p>
+</p><table align="center"><tbody><tr><th>Teensy 3.0</th><th width="40"></th><th>Teensy 3.1</th><th width="20"></th><th>Teensy 3.2</th></tr>
+<tr><td><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/teensy30_back_pinout.png"></td><td></td><td><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/teensy31_back_pinout.png"></td><td></td><td><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/teensy32_back_pinout.png"></td></tr>
+</tbody></table>
+<p>
+On the back side, 2 pins gained new PWM functionality and 6 pins have new
+analog input capability.  A second I2C port is also added.
+
+</p><h2>Reset Signal</h2>
+
+Teensy 3.0 supported both a Program signal, to reboot into bootloader mode,
+and a traditional Reset signal, for a conventional reboot that restarts your
+application.
+<p>
+The Reset signal can be found on a new test point on the bottom side of Teensy 3.1.
+</p><p>
+</p><center><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/teensy31_back_reset.jpg"></center>
+<p>
+
+The Reset signal is also available at a test point on the bottom side of Teensy 3.2.
+</p><p>
+</p><center><img src="./Teensy 3.2 &amp; 3.1_ New Features_files/teensy32_back_reset.jpg"></center>
+<p>
+
+
+
+</p></td></tr></tbody></table>
+</body></html>

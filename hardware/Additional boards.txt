@@ -1,0 +1,9 @@
+Additional boards
+
+
+https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manager/package_sparkfun_index.json
+https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
+http://arduino.esp8266.com/stable/package_esp8266com_index.json
+https://github.com/ridercz/Altairis-ESP8266-FC16
+https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json
+https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json

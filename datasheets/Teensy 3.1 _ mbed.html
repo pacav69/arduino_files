@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://developer.mbed.org/platforms/Teensy-3-1/ -->
+<html class=" js no-touch svg inlinesvg svgclippaths no-ie8compat" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Teensy 3.1 | mbed</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="user-scalable=yes,width=device-width,initial-scale=0.9">
+
+    
+
+    <!-- Included CSS Files -->
+    <link type="text/css" href="./Teensy 3.1 _ mbed_files/app.css" rel="stylesheet"><link type="text/css" href="./Teensy 3.1 _ mbed_files/mbed.css" rel="stylesheet"><link type="text/css" href="./Teensy 3.1 _ mbed_files/questions.css" rel="stylesheet"><link rel="stylesheet" href="./Teensy 3.1 _ mbed_files/responsive-tables.css"><link rel="stylesheet" href="./Teensy 3.1 _ mbed_files/ss-standard.css"><link rel="stylesheet" href="./Teensy 3.1 _ mbed_files/general_foundicons.css"><link rel="stylesheet" href="./Teensy 3.1 _ mbed_files/social_foundicons.css"><link rel="stylesheet" href="./Teensy 3.1 _ mbed_files/import-button.css">
+    <link rel="stylesheet" href="./Teensy 3.1 _ mbed_files/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./Teensy 3.1 _ mbed_files/css">
+
+    <script src="./Teensy 3.1 _ mbed_files/modernizr.foundation.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/jquery.js"></script>
+<script type="text/javascript" src="./Teensy 3.1 _ mbed_files/date.js"></script>
+<script type="text/javascript" src="./Teensy 3.1 _ mbed_files/mbedcom.js"></script>
+<script type="text/javascript" src="./Teensy 3.1 _ mbed_files/import-button.js"></script>
+<script type="text/javascript" src="./Teensy 3.1 _ mbed_files/jquery.timeago.js"></script>
+<script type="text/javascript" src="./Teensy 3.1 _ mbed_files/jquery.cycle.all.latest.js"></script>
+<script type="text/javascript" src="./Teensy 3.1 _ mbed_files/json2.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/jquery.event.move.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/jquery.event.swipe.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/jquery.foundation.alerts.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/jquery.foundation.buttons.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/jquery.foundation.forms.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/jquery.foundation.navigation.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/jquery.foundation.tabs.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/jquery.foundation.reveal.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/jquery.foundation.topbar.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/jquery.placeholder.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/responsive-tables.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/jquery.smooth-scroll.min.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/ss-standard.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/ss-social.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/app.js"></script>
+<script src="./Teensy 3.1 _ mbed_files/clipboard.min.js"></script>
+
+    
+    
+</head>
+
+<body>
+    
+<style>
+@charset "UTF-8";
+/* CSS Document */
+
+body { font-family: "Open Sans", Arial, sans-serif; }
+
+.common-top-bar .dropdown, .sub-bar .dropdown { border: none; box-shadow: 0 5px 3px 1px rgba(0, 0, 0, 0.3); top: 100%; left: 0px!important; }
+
+/* main nav */
+.common-top-bar { padding: 0px 0.5em; min-height:60px;}
+.common-top-bar .columns { padding-left: 0; }
+.common-top-bar { background: #fff; }
+.common-top-bar ul li { border-top: 5px solid #fff;}
+.common-top-bar ul li a { font-size: 0.9em; color: #7a7a7a; font-weight: 400; margin: 0.6rem 0; padding: 0.1rem 0.8rem; }
+.common-top-bar ul li.logo a { padding-left: 0.1rem;}
+.common-top-bar .menu li a img.logo { min-width: 50px!important; height: 24px;
+    width: 168px;
+    margin-bottom: 5px;}
+.common-top-bar .search .button { border:none; background: none; border-color: none; color: #7a7a7a; position: absolute; top: 2px;  right: 0; }
+.common-top-bar .search form { position: relative; padding: 0 0; width: 100%!important;}
+.common-top-bar .search form, .common-top-bar .search form input { width: 100%; max-width: 100%; height:40px;}
+.common-top-bar input {  margin: 10px 0.3em 10px 0;  max-width: auto; top: 0;}
+.common-top-bar ul li.selected { border-top: 5px solid #fff; }
+.common-top-bar ul li.dev.selected { border-top: 5px solid #00C3DC; }
+.common-top-bar ul li.partners.selected { border-top: 5px solid #8A6EAF; }
+.menu > li {
+    display: table-cell;
+}
+.menu{padding-left:0px;}
+.common-top-bar ul li.selected a:link, .off-canvas-wrap{background:white;}
+/* sub nav */
+.sub-bar { background-color: #0a7084; }
+.sub-bar a { color: #fff; font-size: 0.9em;}
+.has-dropdown .dropdown a { color: #7a7a7a; }
+.sub-bar .row { margin: 0 auto; }
+.sub-bar.mbedcom .row { max-width: 62.5rem; }
+.sub-bar.dev .row { max-width: 100%;  width: 1200px; }
+.sub-bar.dev { display: none; background: #128CAB; }
+.sub-bar.partners { display: none; background: #6A4E93; }
+.sub-bar.partners .row {/* max-width: 62.5rem; */}
+.sub-bar ul li { padding: 0.8rem 0; }
+.sub-bar ul li a { padding: 0.2em 1em 0.2em 1em; }
+.sub-bar .user-links { padding: 0.4rem 0; }
+.sub-bar .user-links a { padding: 0.6em 1em; background: rgba(0, 195, 220, 1); font-weight: 600; margin-right: 1rem; margin-left: 1rem;}
+.sub-bar .user-links a:hover { background: rgba(0, 195, 220, 0.5); }
+.sub-bar .dropdown { padding: 0.3rem;}
+.sub-bar .dropdown li { padding: 0.2rem 0; }
+
+.language .dropdown a { border: none; }
+.menu .active a { background: #fff; }
+ul.menu {
+    margin-left: 0;
+}
+.dropdown.menu li.is-dropdown-submenu-parent a::after { border: #fff; }
+
+ul.menu li.has-dropdown ul.dropdown li a {
+    background-image: none;
+    display: block;
+    line-height: 1.4em;
+    padding: 5px 10px;
+}
+ul.menu li a .fa { margin-left: 8px; }
+iframe { height: 100%; }
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    rgba(20, 20, 20, 0.4);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    rgba(20, 20, 20, 0.4);
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    rgba(20, 20, 20, 0.4);
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    rgba(20, 20, 20, 0.4);
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+
+   .sub-bar.dev ul li a { padding-left: 0.3rem; padding-right: 0.3rem; }
+   .sub-bar.dev ul li.user-links a { padding-left: 1rem; padding-right: 1rem; }
+   .sub-bar.dev ul li.home a { background: blue1; }
+}
+
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+   /* main nav */
+   .common-common-top-bar .nav, .common-common-top-bar .search { padding-left: 0; padding-right: 0;}
+   .common-common-top-bar ul li.logo a { padding-left: 0; }
+
+   .nav.columns{height:50px;}
+
+   .common-top-bar{height:115px;}
+   /* sub nav */
+   .sub-bar ul li { padding: 0.8rem 0; }
+   .sub-bar ul li a.menutrigger { margin-left: -0.8em;  }
+   .sub-bar ul li.home a { padding: 0.2em 0.8em 0.2em 0.3em; border-right: 2px dotted rgba(255, 255, 255, 0.3);}
+   .sub-bar ul li a { padding: 0.2em 0.5em 0.2em 0.5em; }
+   .sub-bar ul li.is-accordion-submenu-parent a { padding-left: 2.1rem;}
+   .sub-bar ul li.is-accordion-submenu-parent a::after { border-color: #fff transparent transparent; left: 0.8rem; top: 55%; }
+   .sub-bar ul.sub-menu .menu.vertical.nested { background: red; }
+   .sub-bar ul.sub-menu { margin-top: 0.5rem;}
+   .sub-bar ul.sub-menu li { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+   .sub-bar ul.sub-menu li a { font-weight: 600; }
+   .sub-bar ul.sub-menu li ul a { font-weight: 300; }
+   .sub-bar ul.sub-menu li ul li { padding-top: 0.3rem; padding-bottom: 0.3rem; }
+   .sub-bar .language .dropdown { left: inherit!important; right: 0px!important; }
+ }
+
+</style>
+<div class="common-top-bar top-bar">
+    <div class="nav small-12 medium-9 columns">
+        <ul class="menu" data-dropdown-menu="t822t7-dropdown-menu" role="menubar">
+            <li class="mbedcom logo " role="menuitem">
+                <a title="back to mbed home" href="https://mbed.com/" tabindex="0">
+                    <img src="./Teensy 3.1 _ mbed_files/ARMmbedLogo.svg" alt="" class="logo">
+                </a>
+            </li>
+            <li class="dev selected" role="menuitem">
+                <a href="https://developer.mbed.org/">
+                    Developer <span class="hide-for-small-only">Resources</span>
+                </a>
+            </li>
+            <li class="partners " role="menuitem">
+                <a href="https://partners.mbed.com/">Partners</a>
+            </li>
+            <li class="cloud" role="menuitem">
+                <a href="https://cloud.mbed.com/">Cloud</a>
+            </li>
+        </ul>
+    </div>
+    <div class="search small-12 medium-3 medium three columns">
+        <form class="search float-right" action="https://developer.mbed.org/search/" method="GET">
+            <input type="search" name="q" placeholder="Search mbed...">
+            <button type="submit button" class="button"><i class="general fa fa-search"></i></button>
+        </form>
+    </div>
+</div>
+
+    <div class="nav-wrapper hide-on-print">
+        <div class="row">
+            <div class="twelve columns navigation">
+            
+
+                <ul class="nav-bar menu-list" id="nav">
+
+                    <li class="hasdropdown not-click">
+                        <a href="https://developer.mbed.org/platforms/Teensy-3-1/#">
+                            Hardware
+                        </a>
+                        <ul class="dropdown no-bullet">
+                            <li><a href="https://developer.mbed.org/platforms">Boards</a></li>
+                            <li><a href="https://developer.mbed.org/components/">Components</a></li>
+                        </ul>
+                    </li>
+                    <li class="hasdropdown not-click">
+                        <a href="https://developer.mbed.org/platforms/Teensy-3-1/#">
+                            Documentation
+                        </a>
+                        <ul class="dropdown no-bullet">
+                            <li><a href="https://docs.mbed.com/">Documentation</a></li>
+                            <li><a href="https://developer.mbed.org/cookbook/">Cookbook</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://developer.mbed.org/code/">Code</a></li>
+                    <li><a href="https://developer.mbed.org/questions/">Questions</a></li>
+                    <li><a href="https://developer.mbed.org/forum/">Forum</a></li>
+                    <li class="navSpacer">|</li>
+                    
+                    <li><a href="https://developer.mbed.org/account/login/?next=/platforms/Teensy-3-1/">Log In/Signup</a></li>
+                     
+                    <li class="user-links"><a href="https://developer.mbed.org/compiler/" target="_blank">Compiler</a></li>
+
+                </ul>
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="blue">
+        <div class="row" id="top">
+            <div class="six columns">
+                <div class="breadcrumbs">
+                    
+    <a href="https://developer.mbed.org/platforms/">Boards</a> »
+    Teensy 3.1
+
+
+                </div>
+            </div>
+            <div class="six columns header search-block">
+                
+                
+            </div>
+        </div><!-- end of #top -->
+
+        
+    </div>
+
+    
+<div class="row">
+    <div class="nine columns main-content" id="mbed-content">
+        
+
+        
+
+    
+
+    <div class="content-actions hide-on-print">
+        
+
+        
+    </div>
+
+    <h1>Teensy 3.1</h1>
+
+    <p>The PJRC Teensy 3.1 operates at CPU frequency of 96MHz. The powerful ARM-M4 Freescale MK20DX256VLH7 MCU has 256 kB of flash memory, 64 kB of RAM memory. This platform is used in conjunction with the Teensy Loader program to download the mbed generated .HEX program code. </p>
+
+    
+        <img src="./Teensy 3.1 _ mbed_files/teensy3.1-image_J9ysFt9.jpg.250x250_q85.jpg" width="250" height="250" style="margin-left: auto; margin-right: auto; display: block;">
+
+    <p>
+        </p><div class="flashbox finfo action-bar"><h4>Table of Contents</h4><ol><li><a href="https://developer.mbed.org/platforms/Teensy-3-1/#overview">Overview</a></li><li><a href="https://developer.mbed.org/platforms/Teensy-3-1/#top-view">Top View</a></li><li><a href="https://developer.mbed.org/platforms/Teensy-3-1/#bottom-view">Bottom View</a></li><li><a href="https://developer.mbed.org/platforms/Teensy-3-1/#features">Features</a></li><li><a href="https://developer.mbed.org/platforms/Teensy-3-1/#instructions-to-use-teensy-3-1-on-mbed">Instructions to use Teensy 3.1 on mbed. (Windows)</a></li><li><a href="https://developer.mbed.org/platforms/Teensy-3-1/#schematic">Schematic</a></li><li><a href="https://developer.mbed.org/platforms/Teensy-3-1/#further-information">Further Information</a></li></ol></div><h2 id="overview">Overview<a class="wiki_permalink" href="https://developer.mbed.org/platforms/Teensy-3-1/#overview" title="Permalink to this heading">¶</a></h2>
+<p>With a 28 pin DIP, small footprint, powerful M4 core and 256k Flash, the Teensy3.1 is an ideal platform for MCU 'drop-in' applications that require larger program sizes and speed.
+The mounting pins are standard .1" (2.54mm) spacing which make it easy for bread boarding or mounting on a development PCB. Teensy3.1 mbed library utilizes the same pin definitions as the Freescale FRDM platforms making it simple to transport existing programs. Adding a 32KHz crystal and back up cell, the RTC is fully functional during power down states.</p>
+<p>Using USBSerial from the mbed USBDevice library will enable connection to your PC terminal and other devices. </p>
+<hr>
+<h2 id="top-view">Top View<a class="wiki_permalink" href="https://developer.mbed.org/platforms/Teensy-3-1/#top-view" title="Permalink to this heading">¶</a></h2>
+<p> <img src="./Teensy 3.1 _ mbed_files/teens3.1-main.jpg" alt="/media/uploads/star297/teens3.1-main.jpg" title="/media/uploads/star297/teens3.1-main.jpg"> </p>
+<h2 id="bottom-view">Bottom View<a class="wiki_permalink" href="https://developer.mbed.org/platforms/Teensy-3-1/#bottom-view" title="Permalink to this heading">¶</a></h2>
+<p><img src="./Teensy 3.1 _ mbed_files/teens3.1-rear.jpg" alt="/media/uploads/star297/teens3.1-rear.jpg" title="/media/uploads/star297/teens3.1-rear.jpg"></p>
+<h2 id="features">Features<a class="wiki_permalink" href="https://developer.mbed.org/platforms/Teensy-3-1/#features" title="Permalink to this heading">¶</a></h2>
+<p><strong>Processor MK20DX256VLH7</strong></p>
+<ul><li>Core Cortex-M4
+</li><li>Rated Speed 96 MHz
+</li><li>System Bus Speed 48 MHz
+</li><li>Flash Speed 24 MHz
+</li><li>Flash Memory 256 Kbytes
+</li><li>RAM 64 Kbytes
+</li><li>EEPROM 2 Kbytes
+</li><li>Digital I/O (34 Pins)
+</li><li>Voltage Output 3.3v
+</li><li>Voltage Input 5v Tolerant
+</li><li>Analog Input (21Pins)
+</li><li>Converters (2)
+</li><li>Resolution (16 Bits)
+</li><li>Comparators (3)
+</li><li>Analog Output (1 Pin)
+</li><li>DAC Resolution (12 Bits)
+</li><li>Timers (12 Total)
+</li><li>USB (Host/Device)
+</li><li>Serial (3)
+</li><li>SPI (1)
+</li><li>I2C (2)
+</li><li>CAN Bus (1)
+</li><li>I2S Audio (1)
+</li><li>RTC (date/time) Requires a 32.768 kHz crystal &amp; 3V battery connected to Vbat.
+</li></ul>
+<hr>
+<h2 id="instructions-to-use-teensy-3-1-on-mbed">Instructions to use Teensy 3.1 on mbed. (Windows)<a class="wiki_permalink" href="https://developer.mbed.org/platforms/Teensy-3-1/#instructions-to-use-teensy-3-1-on-mbed" title="Permalink to this heading">¶</a></h2>
+<p>The mbed compiled output will be in .HEX format and will need the Teensy Loader program to transfer the file to the Teensy.</p>
+<p> <img src="./Teensy 3.1 _ mbed_files/teensy_loader.png" alt="/media/uploads/star297/teensy_loader.png" title="/media/uploads/star297/teensy_loader.png"> 
+(Image shows a different board, but the process is the same)</p>
+<p>Download the Teensy Loader from PJRC:</p>
+<p><a href="https://www.pjrc.com/teensy/loader_vista.html" rel="nofollow">https://www.pjrc.com/teensy/loader_vista.html</a></p>
+<p>(Further details on how to install and use are also available there.)</p>
+<p>Compile and save the .HEX output file to the desktop or any other preferred folder on your PC.
+The complied .HEX output will appear large, however the build details will show the correct Flash/Ram values.
+With the Teensy 3.1 connected to your PC, start the Teensy Loader program.
+Select 'File - Open HEX File' or click the Open HEX File icon.
+This will bring up the 'Open File' dialog box.
+Select the mbed output .HEX file you just saved.
+Press the 'Bootloader Mode Button' on the Teensy 3.1
+The Teensy Loader icons will change from greyed out to active.
+Select 'Operation - Program' or click the program icon.
+The file will transfer (quickly) to the Teensy 3.1</p>
+<p>To run your downloaded program, either click the 'Reboot' icon or power cycle the Teensy 3.1</p>
+<p>Important:
+The switch button on the Teensy 3.1 is for program download mode only, it will not reset and/or start your program. If you press it at any time the Teensy 3.1 will go into program mode and remain there until the board is power cycled or the 'Reboot' is selected on the Teensy Loader (if connected to your PC).
+For external hardware reset, a connection will need to be made to the pad marked 'R' on the underside of the board.</p>
+<hr>
+<h2 id="schematic">Schematic<a class="wiki_permalink" href="https://developer.mbed.org/platforms/Teensy-3-1/#schematic" title="Permalink to this heading">¶</a></h2>
+<p> <img src="./Teensy 3.1 _ mbed_files/teensy3.1_schematic.gif" alt="/media/uploads/star297/teensy3.1_schematic.gif" title="/media/uploads/star297/teensy3.1_schematic.gif"> </p>
+<hr>
+<h2 id="further-information">Further Information<a class="wiki_permalink" href="https://developer.mbed.org/platforms/Teensy-3-1/#further-information" title="Permalink to this heading">¶</a></h2>
+<p>For further detailed hardware information, see the Teensy 3.1 page at PJRC:</p>
+<p><a href="https://www.pjrc.com/teensy/teensy31.html" rel="nofollow">https://www.pjrc.com/teensy/teensy31.html</a></p>
+<div class="flashbox fwarning"><h4 class="ftitle">Warning</h4><p>mbed will only support original PJRC Teensy 3.1 boards, counterfeit or clones will not work.
+All questions regarding the use of Teensy 3.1 on mbed must be directed to the Community Contributors or the mbed forum.</p>
+</div>
+    <p></p>
+
+    
+        
+        <p align="center">
+        <a class="button " href="https://www.pjrc.com/store/teensy31.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Buy Now</a>
+        </p>
+        
+        <br>
+   
+
+    
+
+    
+
+
+
+
+
+<div id="component-discussions">
+    <div class="component-community panel">
+        
+            
+                <p>Please <a href="https://developer.mbed.org/account/login/?next=/platforms/Teensy-3-1/">log in</a> to start a discussion or ask a question.</p>
+            
+            
+                
+
+<script language="javascript" type="text/javascript" src="./Teensy 3.1 _ mbed_files/AddFileBrowser.js"></script>
+
+<div id="newtopic" class="" style="display: none;">
+    <p style="float: right; margin: 0px;">
+        <b>
+            <a href="javascript:void(0)" onclick="javascript:$(&#39;#newtopic&#39;).slideToggle(&#39;medium&#39;);">
+                <i class="fa icon_cross" aria-hidden="true"></i> Close
+            </a>
+        </b>
+    </p>
+
+    <h3 class="sectionheader" style="margin-top: 0px;">
+        
+        Start new topic
+        
+    </h3>
+    <div id="result" style="display:none;">
+        <h4>Preview of your unsaved post:</h4>
+        <div id="resultcontent"></div><br>
+    </div>
+
+    <form method="post" action="https://developer.mbed.org/forum/platform-110-Teensy-3-1-community/">
+        <input type="hidden" name="csrfmiddlewaretoken" value="o8ZbElzKi9XEuscBlR0sM3GBEpg4i8kg">
+        <table class="formtable">
+            
+            <tbody><tr>
+                <td>
+                    <label for="id_topic_name">Topic Title:</label>
+                    
+                    <input id="id_topic_name" maxlength="150" name="topic_name" size="60" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                    <div style="text-align: right; margin-bottom: 5px;"><a href="javascript:FileBrowser.show(&#39;id_content&#39;, &#39;/filebrowser/browse/?pop=1&amp;mode=wiki&amp;editor=id_body&#39;);" class="fb_show">Insert images or files <img src="./Teensy 3.1 _ mbed_files/filebrowser_icon_show.gif" height="18" alt=""></a></div>
+                    <textarea cols="40" id="id_body" name="body" rows="15" style="width: 100%;"></textarea>
+                    <script type="text/javascript">
+    $(document).ready(function()
+    {
+    $("#showhelp").click(function() {
+        $("#help").slideToggle('fast')
+      }
+    );
+    });
+</script>
+            <div style="text-align: right;"><a href="https://developer.mbed.org/platforms/Teensy-3-1/#" onclick="return false;" id="showhelp"><i class="fa fa-caret-down" aria-hidden="true"></i> Editing tips</a>
+            </div>
+            <div id="help" style="display: none; margin: 10px 0 20px 0" class="flashbox finfo">
+
+                <h4 class="ftitle">Editing tips</h4>
+                
+                <div class="row">
+                	<div class="twelve columns">
+<h5>Headings</h5>
+<pre>= Heading 1 =
+== Heading 2 ==
+=== Heading 3 ===
+</pre>
+
+<h5>Styling</h5>
+<pre>**bold text**, //italic text//, ##monospaced text##
+__underlined text__, --strikethrough text--
+^^superscript text^^, ,,subscript text,,</pre>
+
+<h5>Lists</h5>
+<pre>* List Item 1
+* List Item 2
+ # Numbered List Item 2.1
+</pre>
+
+<h5>Links</h5>
+<pre>[[WikiPage]]
+[[http://mbed.org]]
+[[/handbook/SPI|More about SPI]]
+</pre>
+
+<h5>Upverter embed <small>(hint - use the unique id found in the embed code)</small></h5>
+<pre>&lt;&lt;upverter&gt;&gt;634b5640a5bbd8a7&lt;&lt;/upverter&gt;&gt;
+</pre>
+
+<h5>Code <small>(hint - publishing your code and linking to it makes it easier to import your program)</small></h5>
+<pre>&lt;&lt;code title=include the mbed library with this snippet&gt;&gt;
+#include "mbed.h"
+&lt;&lt;/code&gt;&gt;
+</pre>
+<h5>Linking to a program</h5>
+<pre>&lt;&lt;program  /users/simon/programs/SerialBuffer/latest/ &gt;&gt;</pre>
+
+<h5>Upverter embed <small>(hint - use the unique id found in the embed code)</small></h5>
+<pre>&lt;&lt;upverter&gt;&gt;634b5640a5bbd8a7&lt;&lt;/upverter&gt;&gt;
+</pre>
+
+<h5>Team embed example</h5>
+<pre>&lt;&lt;team http://mbed.org/teams/mqtt/ /&gt;&gt;
+</pre>
+
+<h5>Component embed example</h5>
+<pre>&lt;&lt;component http://mbed.org/components/AX-12/ /&gt;&gt;
+</pre>
+
+
+
+
+<h5>Table of Contents <small> is included by default, to disable put this snippet on the page.</small></h5>
+<pre>&lt;&lt;notoc&gt;&gt;
+</pre>
+
+<h5>Blocks</h5>
+<pre>&lt;&lt;quote&gt;&gt;
+Can I markup a quote, help or warning block?
+&lt;&lt;/quote&gt;&gt;
+</pre>
+
+<h5>Images</h5>
+<pre>{{/static/img/mbed.gif}}
+{{http://mbed.org/static/img/mbed.gif}} 
+[[WikiPage|{{/static/img/mbed.gif}}]]
+[[WikiPage|{{/static/img/mbed.gif}}]]
+</pre>
+
+<h5>Gallery <small>size argument can be either small or medium, default is large</small></h5>
+<pre>&lt;&lt;gallery size=small&gt;&gt;
+{{/static/img/mbed.gif}}
+{{/static/img/mbed.gif|mbed logo}}
+[[http://mbed.org|{{/static/img/mbed.gif}}]]
+[[http://mbed.org|{{/static/img/mbed.gif|mbed logo}}]]
+&lt;&lt;/gallery&gt;&gt;
+</pre>
+
+<h5>Videos</h5>
+<pre>{{http://www.youtube.com/watch?v=7LPDRcahhUE}}
+</pre>
+</div>
+                	
+                	<div class="twelve columns">
+                	<p style="text-align:right; margin-bottom: 0;">See the <a target="_blank" href="https://developer.mbed.org/cookbook/Wiki-Syntax">full wiki syntax (in new window)</a></p>
+                	</div>
+                
+                
+</div>
+                
+                
+ 
+            </div>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="id_tags">Topic Tags:</label>
+                    <input id="id_tags" name="tags" style="width: 300px" type="text"><script type="text/javascript">
+            jQuery("#id_tags").autocomplete(["__enable_mmu()", "__ldrex", "__strex", "_NARGS", "0.0.0.0", "1", "1-wire", "100MHz", "1024K", "10base-t 100base-tx", "11", "11062", "11bit", "11U24", "11u35", "12", "12.0KB", "128-6", "12C", "12v", "15A", "16 bit ADC", "1768", "1800", "1Mbit/sec", "2", "2.0", "230", "2368", "23K256", "24 bits", "29bit", "2D", "3-Space", "3.1", "3.3v Vout", "32-bit", "32.768kHz", "32KB", "334", "3D", "3g", "3pi", "4.21", "400khz", "401RE", "4088", "422", "433", "433MHz", "434", "434MHz", "4D SGC TFT Screen", "4DGL", "5", "5.0", "5110", "513137", "5v", "6", "60MHz", "64", "64-bit", "64bit", "64KB", "6610", "6610LCD", "6dof", "7", "7segment", "8", "8.3", "802.3af", "802.3AT", "9", "9 bit", "9-DOF", "9bit", "a", "A1", "a9", "AA", "absdiff", "acceleration", "accelerometer", "acceptance", "access", "accounts", "Accuracy", "acquisition", "active object pattern", "ActiveSync", "activity", "AD345", "AD5666", "AD7190", "AD7746", "AD7797", "Adafruit", "adafruit GPS breakout", "adapter", "adc", "address", "ade7754", "ADK", "administration", "ADT7410", "Advancement", "adxl335", "ADXL345", "AES", "AES256", "agilent", "AHBSRAM", "AHBSRAM0", "AHBSRAM1", "AHRS", "AIC23", "ain", "Airplay", "Airtunes", "ajax", "algebra", "all", "allocation", "almeno", "AltGr", "altium", "amin", "amoled", "Amp", "amplifier", "Amps", "an", "Analog", "Analog Devices", "analog in", "analog out", "analog reference", "AnalogIn", "AnalogInOut", "AnalogOut", "analogue", "analogue output", "Analytics", "ANCS", "and", "android", "AndroidAccessory", "Andruino", "ANGLE", "animatronics", "anologin", "ANT", "ANT+", "Antenna", "Aout", "AP2", "apache", "api", "APP", "app-board", "append", "Apple", "application", "April", "arch gprs", "architecture", "arduino", "arduino shield", "ardunnio", "are", "ARES", "arguments", "arithmetic", "ARM", "arm_gcc", "ARM-GCC", "ARM7", "ARM9", "arr", "array", "Arrays", "Artists", "as5050", "Ascii", "ASEE", "asks", "Assembler", "assembly", "assertion", "Astrobe", "async", "AT", "at45", "at90", "Atmel", "atoi", "ATSAMD21-XPRO", "attach", "attach()", "audio", "AUDIO_DISCO_F746NG", "auto", "autoisp", "Automobile", "AUTOSAR", "average", "AVR", "AVReceiver", "awesome", "awesome!", "Ax500", "AxedaGO", "background", "Bad", "balancing", "banging", "bare metal", "Base", "base board", "baseboard", "basic", "bass", "batteries", "Battery", "baud", "baudrate", "BBC", "beacon", "BeagleBone", "Bee", "beginner", "belgium", "Bertl", "Best", "beta", "BetaBug", "between", "beyond", "Bi-Directional", "Bidirectional", "big", "billy", "bin", "binary", "BIND", "Binocular Disparity", "biped", "bit", "bit-band", "bitbang", "bitmap", "Bitmaps", "bits", "bitwise", "bitwise or", "bl  smart", "Black Friday", "BLE", "ble api", "BLE Nano", "BLE_API", "BLE_Thermometer", "bleeper", "blend", "blinkm", "Blinky", "blip", "Blob Algorithm", "blocks", "blocks free", "BLOD", "Blue", "bluebrain", "bluegiga", "Bluemix", "BlueRay", "bluetooth", "Bluetooth 4.0", "Bluetooth Low Energy", "Bluetooth modules BX100", "bluetooth smart", "blueusb", "bma180", "BME280", "bmp085", "BMPTK", "Board", "boards", "bob2", "bog", "BOM", "bonding", "bonjour", "bookmark", "books", "bool", "boost clock rate", "Boot", "bootloader", "bootstrapping", "Box", "brace", "braces", "breadboard", "break", "breakout", "breakout board", "breakpoint", "brick", "broadcasting", "broken", "Brouilleur GPS Voiture", "brouilleur téléphone portable", "brown-out", "browser", "BSOD", "BTstack", "buffer", "bufferd", "buffers", "bug", "bugs", "build", "build awesome", "Build Options", "builder", "buildsystem", "burst", "bus", "BusIn", "BusInOut", "BusOut", "BUTTON", "buzzer", "BX10", "Byte", "bytes", "bzr", "C", "C Library", "c programming", "c-embeded", "C'est", "C++", "c++0x", "C++11", "C027", "C24LCXX_I2C", "C4017W", "Cable", "caching", "Cad", "call", "callbacks", "camera", "CAN", "CAN adapter", "can-bus", "canal", "canbus", "cancel", "cannot", "cannybots", "CANRAM", "Capacitance", "Capacity", "Captcha", "captions", "captouch", "capture", "car", "card", "caret", "carro", "case", "cast", "CAU", "cc2500", "CC3000", "CDC", "CEC", "CELL", "CGI", "chain", "challange", "Change", "Char", "char *", "character", "checkout", "chinese", "chip", "chip select", "Chord", "chrome", "chromium", "cinder", "Circuit", "circular", "class", "class D", "classes", "clean", "cli", "clien", "client", "clock", "clone", "close", "cloud", "cluster", "cm0", "cmake", "cmis", "CMPS03", "cmsis", "cmsis dsp", "CMSIS-DAP", "cmsis++", "CNC", "CoAP", "code", "Code 10", "Code Correlation", "code folding", "code generation", "code red", "Code Sourcery", "code_red", "code?", "Coder;", "CodeRed", "codes", "CodeSourcery", "CoIDE", "cojson", "colapse", "collaborate", "Collaboration update", "collision", "color", "colors", "com", "COM3", "command", "commands", "comment", "comments", "commit", "common", "comms", "Communication", "community contributors", "comparator", "compare", "compass", "compatibility", "competition", "compi", "compilation", "compile", "compiler", "compiler erro", "compiler error", "compiler error codes", "Compiling", "Compoler", "component", "component_database", "componentless", "components", "Computer", "con", "concatenation", "Configuration", "configure", "connect", "connected", "connector", "connectors", "const", "constant", "constructor", "consumption", "contest", "continuous", "contract", "contributions", "control", "controller", "controllerless", "conversion", "CooCox", "cookbook", "copy", "copyrights", "Core407V", "corrupt", "Cortex", "Cortex-M0", "Cortex-M0+", "cortex-m4", "cos", "cosm", "counter", "counters", "counting", "cout", "CPHA", "CPOL", "cpplapack", "CPU", "CPUマニュアル", "CRC", "critical_section", "Crius", "Crypto", "cryptography", "crystal", "CS4331", "CS5331", "css", "CT32", "CTCR", "CTS", "CubeMX", "CubieBoard", "Curl", "current", "current sensor", "custom", "custom channel", "Custom Terminal", "cut", "CW", "CyaSSL", "D-", "D+", "D0", "D1", "D21", "D5", "D6", "da", "DA14580", "dac", "DAC noise", "daisy", "Dalek", "Dali", "damage", "DAP", "DAQ", "data", "data abort", "data entry", "Data Logging", "Database", "datalogging", "Date", "datestamp", "dB", "DC motor", "dc-offset", "dead", "deadlock", "deadmbed", "debounce", "debug", "debugger", "debugging", "debugging DigitalOut", "debugging tools", "declaration", "declarations", "deep sleep", "DeepSleep", "default", "defined", "definition", "DEGREE", "delay", "delete", "delta", "demo", "deploy", "deprecated", "DerbyCon", "derive", "description", "Descriptors", "Design", "design101", "DesignSpark", "desk", "destroyed", "Destructor", "detach", "detection", "development", "developmet", "device", "device.h", "devices", "DFCM-NNN40", "DFRobot", "DFU", "DHCP", "DHT11", "DHT22", "diary", "Differant", "difference", "Differential AD", "Digilent", "Digital", "digital compass", "Digital I/O", "digital servos", "DigitalDice", "DigitalIn", "DigitalInOut", "digitalOut", "DigitialOut", "dint", "diode", "DIP", "direct test mode", "direction", "directive", "directory", "disable", "DISCO-F746NG", "DISCONNECT", "Disk", "display", "Displays", "distance", "distributers", "DIY", "dll;matlab;", "DM9161", "DMA", "dmu02", "DMX", "DMX512", "dns", "doa", "doc", "docs", "document", "documentation", "documentation not ready", "does", "DOGM", "domotic", "don't", "dongle", "doorbell", "dot", "DotNet", "double", "DoubleEdge", "doubt", "Dowload", "Download", "downloads", "doxygen", "DP83848", "dram", "drift", "Drive", "driver", "driverlibrary", "driving", "ds-5", "DS1052E", "ds1307", "DS1820", "DS18B20", "DS18S20", "Dshot", "DSP", "dtm", "dual-core", "duplex", "duty cycle", "DVI", "Dynamic", "dynamixel", "dyndns", "e-ink hoopup", "E-Paper", "E260-D", "E289", "E980", "EA", "Eagle", "easy", "Easydriver", "echo", "eclipse", "editor", "EEPROM", "ef32", "effect", "EFM32", "ehternet", "EIDE", "eint", "elegant coding", "Element14", "eLua", "em-406", "EM-406A", "EM408", "email", "Embedded", "EmbeddedArtists", "embitz", "EmBlocks", "empty", "empty binary file", "EMS", "emulator", "emwin", "ENC28J60", "enclosure", "Encoder", "encoders", "encoding", "encrypted firmware", "encryption", "Endpoint", "Endpoints events", "energy", "energy monitoring", "Energy Profile", "engine", "entire", "Entropy Error", "enum", "Environment", "ERIC", "err", "errata sheet", "Error", "Error 777", "Error code", "Error:", "Errors", "es", "esc", "Escort Service in Gurgaon", "ESP8266", "español", "etc...", "eth", "ETH_RST", "etherCAT", "ethernet", "EthernetIfBeta", "EthernetInterface", "EthernetInterface　GR-PEACH", "EthernetNetIf", "evb", "eve", "event-driven programming", "events", "Ever", "eVY1", "example", "exception handling", "exit", "Expansion", "Export", "Export C", "extended operating temperature", "extension", "external", "external memory", "extract", "eye-fi", "F091RC", "F302R8", "f303k8", "f334", "F334R8", "F401RE", "F411RE", "F429ZI", "facebook", "fail", "fail.txt", "failed", "failure", "fall()", "FAQ", "fashion", "fast", "faster", "FastOut", "FastPWM", "FAT", "FAT FS", "fatfilesystem", "FatFIlesystem.lib", "FATFS", "faulty mbed", "Favorites", "FDRM", "FDRM_KL25Z_USBSerial_example", "FDRM-KL25Z", "feature", "features", "fedora", "feedback", "Felica", "feof", "ffc", "FFT", "fgetc", "Fiel", "fields", "FIFO", "file", "File Exclusion", "file format", "filename", "files", "Filesys", "filesystem", "filetree", "filter", "filtering", "filters", "find", "finder", "firefox", "firm", "firmata", "firmware", "firmware 141212", "Firmware over the air", "Firmware Update", "firmware.bin", "FirmwareUpdater", "fixedpoint", "fixthis", "flash", "flash drive", "flashing", "flexibility", "flicker", "float", "Floating point", "Flot", "flow", "Fm+", "fmc", "folders", "Follow", "following", "font", "Fools", "FOOTPRINT", "fopen", "for", "foreground", "fork", "format", "formating", "formatting", "Forum", "FOTA", "fpc", "fpc1011f", "FPF212", "FPGA", "fprint", "fprintf", "fragmentation", "frame", "frame rate", "framework", "FRDM", "FRDM K64F", "FRDM-K22F", "FRDM-K64F", "FRDM-K82F", "FRDM-KL-46Z", "FRDM-KL05z", "FRDM-KL25Z", "FRDM-KL46Z", "FRDM0K22F", "free", "freebsd", "Freedom", "Freedom K64", "FreeRTOS", "Freescale", "freeze", "freezes", "Freq", "frequency", "Fried", "frmd-kl25z", "frog", "front panel", "frozen program", "frustration", "fscanf", "fseek", "FSK", "FT232R", "FTDI", "FTDI Cable", "FTP", "fubction", "fuckyouimspiderman", "fun", "function", "function prototypes", "für", "fuse", "future", "Fwrite", "fxos8700cq", "FXOS8700Q", "G", "gadgeteer", "game", "gang", "garbage", "gateway 504 timeout", "GATT", "GATT Client", "gay", "gcc", "gcc arm", "GCC_CR", "gcc4mbed", "gdb", "Gecko", "generate", "Gesture", "getc", "GFX", "GHI", "git", "glasses", "GLCD", "glitch", "global", "gmail", "gnu", "GNU GCC", "google", "gpdma", "GPIO", "GPRS", "GPS", "GR-PEACH", "GR-PEACH　Hardware", "GR-PEACH_producer_meeting", "GR-PEACHで、128x64ドットのグラフィックLcdに表示", "GR-SAKURA", "graphic", "Graphics", "Graphics Driver", "graphing", "graycode", "great", "grep", "group", "Grove", "GSM", "guest", "GUI", "guitar", "Gurgaon escorts", "gyro", "gyroscope", "h", "H-bridge", "hacking", "hacks", "HAL", "half", "hall effect sensor", "HAM", "HAM Radio", "hand crank", "handler", "handshaking", "hang", "hangs", "hard fault", "HardFault_Handler", "hardhackers", "HARDSTOP", "hardware", "HCE", "HcHCCA", "HCSR04", "HD44780", "HDD", "HDL", "HDMI", "header", "headers", "heap", "heat", "hello", "helloworld", "help", "Helpful_1", "hepl", "herd", "hex", "hexapod", "hg", "hibernate", "hibernation", "HID", "high", "high temperature", "high-pass", "high-speed", "hire", "Hitachi", "Hitec", "hm-10", "HMAC", "HMC6352", "HMI", "home", "Home Automation", "HomeKit", "homo", "hookup", "Host", "host card emulation", "HotSync", "hour glass", "how", "howto", "HRM1017", "HSYNC", "HTM", "html", "http", "HTTPClient", "httpd", "HTTPDynamicPage", "HTTPfile", "HTTPLog", "https", "HTTPServer", "HTTPServer_echoback", "HTTPServerExample", "HTTPText", "HTTs", "hub", "hub scynchronisig", "Humidity", "I/O", "I2C", "I2C API", "I2C slave", "I2C/SPI-to-UART IC", "I2C2", "I2CC0", "i2cmaster", "i2cslave", "I2S", "I2S;", "IAP", "IAR", "iBeacon", "Icrease", "ID", "ID12", "IDB05A1", "ide", "ideas", "ie7", "IE9", "if", "ifdef", "ignore", "IHM06A1", "ILI9325", "ILI9328", "ILI9341", "imabsdiff", "image", "image differences", "image processing", "image processing in mbed", "Images", "impl", "import", "importing", "IMU", "IMU Razor", "In", "inches", "include file", "incomplete coding", "Increasing", "indent", "indexing", "industrial", "Inertial", "infinite loop", "infra", "infrared", "initialisation", "initialization", "initiliazation", "InitMemorySubsystem()", "inline", "Input", "input capture", "Insertion", "Install", "installer", "instance", "Instances", "int", "integer", "integration", "Intel ISEF", "interface", "interface chip", "interfacing", "intern", "internal", "Internet", "internet of things", "Interr", "interrupt", "interrupt callback", "Interrupt priority", "InterruptIn", "interrupts", "introduction", "intsall", "invalid", "IO", "iOS", "IOT", "ip", "ip address", "IP checksum", "ipad", "iPhone", "IR", "IR Sensors", "IRC", "irq", "is", "ISIS", "iso", "ISO/IEC", "ISP", "ISR", "Issue", "issues", "It", "italic", "ITG3200", "ittraining", "iTunes", "J-Link", "Japan", "Japanese", "Java", "javascript", "Jde", "JPEG", "jQuery", "JSON", "JTAG", "Jumentum", "k20d50m", "K22F", "K64", "K64F", "Kam", "KB", "KDS", "keil", "kernel", "key", "keyboard", "keypad", "keyword", "kickstarter", "Kinetis", "kit", "kits", "KL-25Z", "KL05Z", "KL25z", "KL43Z", "kl46z", "kl64f", "KS0108", "KURD", "L053R8", "L152RE", "L293D", "l298n", "L432KC", "l476", "L476RG", "L6235E", "labview", "labview2009", "Lack", "LAN", "lan8720", "landscape", "language", "lapack", "laser", "laser cut", "latency", "layout", "LCD", "LCD_ST7735", "LCP11U24", "ldr", "LE", "leak", "learning", "least", "led", "LED blink", "led matrix", "LED1", "LED3", "LEDboard", "LEDscreen", "LEDSflashfast", "LEFT", "LEM", "Level Converter", "level shifting", "level translation", "LF1S022", "LFN", "lib", "LibHumidity", "libmDot", "libmDot-Custom", "libraries", "library", "libs", "Licence", "license", "lifespan", "light", "light sensor", "Like", "limit", "limitations", "limits", "LIN", "line", "line 21", "Line Follower", "line numbers", "linefollow", "link", "LINK_LED", "LINK_SPEED", "linke", "linkedin", "linker", "linker error", "links", "lint", "linux", "lipo", "LiquidCristal", "LiquidWare", "LIS302", "LISA_U200", "listener", "liwp", "LM175", "LM34", "load", "loading", "LocaFileSystem", "Local", "localdisk", "localfile", "LocalFileHandle", "LocalFileSystem", "LocalFileSystem not released", "localflash", "localhost", "localtime", "locks", "lockup", "log", "logging", "logging levels", "logo", "Long", "Look Up Table LOT", "loops", "Lora", "LoRaWAN", "lost", "lost program", "lot", "low", "low power", "low power operation", "low temperature", "low-level", "low-pass", "LPBmini", "LPC", "LPC_CAN", "LPC_MCI", "LPC_MIC", "LPC1114", "LPC1114FN28", "lpc1115", "LPC11U24", "LPC11U35", "LPC11U67", "LPC11U68", "LPC11U6X", "lpc11uxx", "LPC1549", "LPC15xx", "LPC17", "lpc17_emac.c", "LPC1768", "LPC1768.sct", "LPC1769", "lpc1788", "LPC1857", "LPC18XX", "lpc2368", "LPC23xx.h", "lpc2478", "LPC407x", "LPC4088", "LPC408x", "lpc43xx", "lpc810max", "LPC812", "LPC824", "LPCmini", "LPCXpresso", "LPCXpresso1549", "LSM303", "lt8500", "LTC2400", "LTDC", "lua", "luminosity control", "lwip", "LWIP_TRANSPORT_PPP", "M0", "M2M", "m2p", "m3pi", "m4", "M7", "mac", "MAC address", "mac os", "Machine", "macos", "macro", "madplayer", "magic", "magician", "magjack", "magnetics", "magnetometer", "Main", "mainpage", "maintenance", "Make", "makefile", "Makefile;", "maker", "malloc", "MAM", "Management", "manager", "Manufacture", "manufacturing", "map", "mapping", "marble run", "markdown", "mask", "mass", "master", "materials", "math", "math.h", "MATLAB", "matrix", "Maturity of mbed", "max", "MAX11110AUT+T", "MAX233", "max32630fthr", "MAX44000", "MAX44000PMB1", "MAX5842", "MAX6675", "MAX6952 LED driver", "maximum", "maze", "mb", "mb90f549", "mbed", "mbed 5.0", "mbed account", "MBED Application Board", "MBED ASSERTION FAILED", "mbed cloud system", "mbed ena", "mbed enabled", "mbed firmware", "mbed library", "mbed LPC1768", "mbed online compiler", "mbed opencv", "mbed rtos", "mbed SDK", "mbed site", "mbed SPI", "MBED website", "mbed_debug", "mbed_die", "MBED_MICROCONTROLLER", "mbed_official", "mbed_reset", "mbed_rtos", "mbed-cli", "mbed-client", "mbed-dev", "mbed-dsp", "MBED-IDE", "MBED-OS", "mbed-rtos", "mbed.h", "MBED.HTM", "mbed.lib", "mbed.org", "mbed1768", "mbed2", "mbedchallenge", "mbedlib", "mbedOS", "mbedTLS", "mBuino", "MCP23017", "mcp2551", "MCU", "MD25", "md5", "mdot", "mDot;connection;LED", "mean", "measure", "measurement", "mechatronics", "median", "Medical device", "mega", "MemberFunction", "memory", "memory allocation", "memory error", "Menbed", "menu", "mercurial", "Mesauer", "message", "Meter", "MHz", "micro", "micro amp", "micro:bit", "Microbit", "microbit-dal", "Microchip", "microlib", "micromouse", "micropython", "microSD", "Microwire", "MID", "MIDI", "mien", "MIFARE", "mikroelektronika", "milliseconds", "MiMic", "mindstorms", "mini", "minimu9", "minimum", "miniusb", "Mint", "Mirror", "Missing", "MK20Dx256", "MK64FX512", "mkit", "mkl16z128vfm4", "MMU", "mobile", "mobile phone", "mobileLCD", "Modbus", "modbustcp", "MODDMA", "MODDMA.h", "mode", "model", "modem", "moderation", "MODGPS", "MODI2C", "modifications", "MODSERIAL", "Modula-2", "module", "monitor", "monitor mode", "morpho", "Morse", "Mosi", "mossmann Bluetooth radio", "motion", "motion detection", "motor", "motor driver", "motors", "mount", "Mouse", "mouth", "mp3", "mp3player", "mpr121", "MPU-6000", "MPU-6050", "MPU-9250", "MPU6000", "MPU6050", "MQTT", "mRotaryEncoder", "mruby", "mrubyc", "ms5611", "msc", "MSCFileSystem", "MSCUsbHost", "MSD", "MTDOT", "mtu", "multi-core", "multicast", "multilingual", "multiple", "multiple binaries", "multiple devices", "multiplexing", "multitasking", "music", "mutiplex", "mysql", "N-Key", "n'", "n64 controller", "Name", "Names", "namespace", "naMote72", "nano", "nanopb", "NanoSocketiWifi", "nanostack", "nationalrail", "navigation", "NB", "NDS", "Near Field Communication", "needed", "negotiate", "NeoPixel", "nested", "NET", "NetServices", "NetServicesMod", "network", "networking", "NetworkSocketAPI", "new", "new board", "NEW MBED", "new tcp-ip stack", "new users", "newbie", "Newhaven", "newlib", "newline", "news", "NFC", "NFS", "NHD-2.4-240320SF-CTXI#-1", "Niggar", "NMEA", "NNN40", "No Space in Execution Regions", "Node.js", "nohl", "noise", "Nokia", "Nokia LCD", "Nokia6610", "Non", "non-blocking", "non-public", "non-pulic", "non-volatile memory", "non-volotile", "Noob", "Nordic", "nospam", "not", "not available", "not consecutive sectors", "not mounting", "Note", "Notebook", "notebook pages", "notebooks", "notes", "notifications", "novice", "NQ620", "nRF2401A", "nRF24L01", "nrf5", "nrf51", "nRF51 SDK", "nrf51 skd", "nRF51-DK", "nRF51422", "nRF51822", "nrf52", "nRF52-DK", "NRFFW", "NTAG", "NTP", "ntp server", "ntpdate", "Nucleo", "Nucleo F411RE", "Nucleo L073RZ", "Nucleo-F070RB", "NuCleo-F401RE", "NUCLEO-F411RE", "NUCLEO-F746ZG", "NUCLEO-IHM02A1", "NUCLEO-L476RG", "nucleos", "nulll", "number", "numbers", "numeric", "NVIC", "nvic_systemreset", "NVM", "nxp", "NXP/mbed", "OAuth", "Oberon", "object", "Object Design", "occupancy", "octal", "octopus card", "of", "offline", "offline compile", "offset", "OLED", "OM13056", "on", "on screen display", "OnDisconnection", "One Wire", "OneWire", "online", "online compiler", "onlinehelp", "oooooooooooooooyyyooooooo", "Op", "Open", "open drain", "open source", "openair", "opencv", "OpenDrain", "OpennNETCF", "openocd", "openSDA", "opensolaris", "opensource", "openssl", "opera", "operators", "Optimization", "options", "Optocoupler", "Orange", "OS", "OS-5", "osc", "OSC_ENA", "oscillator", "Oscilloscope", "osd", "OSEK", "ostream", "OSX", "OTA", "OTG", "OU", "Out", "outage", "output", "outputs", "Outrageous Circuits", "OV7670", "Over", "overflow", "overloading", "P-NUCLEO-IHM001", "P0_15", "P0_3", "p15", "p29", "p2m", "Pachube", "package", "Page", "paho", "pain", "pairing", "PAKET", "pal", "parallax", "Parity", "parse", "parts", "Pascal", "Password", "paste", "PATA", "pbuf", "pc", "PC board", "pc-lint", "pc.printf", "PC.scanf():", "PCA9532", "PCB", "PCF8574", "PCF8575", "PCF8575C", "PCLKSEL0", "PCLKSEL1", "PCM2704", "pdf", "performance", "period", "peripheral", "peripheral clock", "Permission Denied", "persistent", "pfe_csc", "phase", "phi", "phy", "Physical Web", "Pi", "PIC", "PIC32MZ", "picture", "pictures", "PID", "piezo", "Pin", "pin 18.", "pin21", "pin24", "pin25", "pinball", "PinDetect", "PING", "pinmap", "PinNames", "pinou", "pinout", "pins", "Pinsel4", "PIO", "pir", "pixel", "plan", "plastic parts", "platform", "platformio", "player", "playstation", "PLC", "PLC01A1", "PLL0", "PLL1", "Plotting", "Plus One", "PM", "POE", "pointer", "pointers", "polarity", "polarssl", "pollici", "polling", "polohu", "pololu", "pong", "port", "port expander", "PortIn", "porting", "portpin", "ports", "position contro", "POSIX", "post", "pour", "pow(", "Power", "power consumption", "power factor", "power harvesting", "power management", "power managment", "power over ethernet", "Power Up", "powerdown", "POWERED-STOP", "Powering", "powerline", "powersource", "PPM", "ppmsum", "PPP", "PPP-Blinky", "prallax", "Precompiled", "preprocessor", "Press", "pressure", "preview", "print", "Printed Circuit Board", "printf", "printout", "priority", "private", "Private message", "prject", "problem", "processing", "Processor_update", "Production", "profile", "program", "program details", "Programme", "programmer", "programmin", "programming", "project", "project list", "projects", "promiscuous", "Promiscuous mode", "Promisuous mode. Moniter mode", "promotion", "proposal", "prot", "Protection", "proteus", "proto", "protoboard", "protobuf", "protocol", "prototype", "prototype to hardware", "prototyping", "PS/2", "PS2", "PS3", "PSP", "pstorage", "PTC1", "public", "publish", "published", "publishing", "pulldown", "pullup", "pulse", "PULSE COUNTER", "pulse direction", "Pulse;", "Pulsewidth", "push", "putc", "pwm", "PwmIn", "PwmOut", "pymite", "pyOCD", "python", "QEI", "qp", "qq", "qrcode", "qsort", "QSP Revue", "QTR-1RC", "quadrature", "quadrocopter", "quality", "quaternions", "questions", "quiescent", "quiz", "QVGA", "R", "RA8875", "racing", "Radio", "rail", "rain", "RAM", "range", "RangeFinder", "Rasperry", "rate", "rates", "raw", "RawSerial", "RawSerial.h", "RC", "RC5", "re-entrancy", "read", "read_us", "readdir", "reader", "Reading", "readNB", "real", "real product", "real-time", "realloc", "realtimeclock", "reboot", "rebuild;", "rebuilt", "receive", "recognition", "recognized", "recommend", "recover", "red", "red suite", "RedBearLab", "reference", "Reference code", "reference design", "References", "referencing", "Reflectance", "refrence", "Register", "registers", "registration", "regression", "regulator", "reinvoke_isp", "Relay", "relays", "remote", "remote data collection", "Remote LCD", "Removal", "remove", "rename", "Renesas", "replace", "replace all", "Report", "Repository", "reprogram", "reqgqr't&", "requested", "reset", "Reset Button", "resistor", "Resize", "resolved", "response", "retrieval", "Retrieving", "Return Code 9", "Returntype int", "reverse", "review", "revision", "revisions", "rf", "RF4463PRO", "RFID", "rfm12", "RFM12B", "RFM95", "RFM95W", "rgb", "ribbon", "RIGHT", "Rigol", "rise", "rise()", "RIT", "rj45", "rld", "rmdir", "RMII", "rms", "RN-XV", "rn41", "roadmap", "robo3001", "RoboClaw", "robodog", "robot", "Robotics", "robotis", "rollover", "ROM", "ROSMbed", "rosserial", "rotary", "rotate", "router", "routine", "Routing", "rover", "rpc", "RPCFunction", "RPCVariable", "RPG", "RS-232", "RS-485", "rs232", "RS485", "RSA", "rss", "rssi", "RTC", "rtos", "Rtostimer", "RTS", "RTX", "ruby", "rugged", "rules", "rx", "RX-64", "RxIrq", "rxtx", "RZ/A1H", "s", "s110", "S130", "SAA1064", "sabirin", "Safari", "SALE", "SAM", "SAMD21", "sampling", "sampling time.", "Save", "save as", "SC16IS750", "SCA3000", "scanf", "Scanning Matrix", "scatter file", "Scheduler", "Schematics", "Science", "sclk", "scmRTOS", "scope", "scp1000", "SCR", "Scratch", "screen", "script", "Scroll", "SD", "SD Card", "SD-Card", "SDA", "SDCard", "SDFileSystem", "SDFileSystem Library", "SDFileSystemSystem", "SDHC", "sdhcfilesystem", "SDK", "sdram", "SE95D", "search", "Sections of Aggregate Size", "secure", "secure boot", "security", "Seeedstudio", "Segger", "segment", "segway", "select", "selection", "semaphore", "semihost", "semihosting", "Send", "sensor", "sensors", "sensors_reader", "SERCOM", "Serial", "Serial Comm", "Serial Flash", "serial interrupt", "Serial LCD Library", "Serial Number", "Serial P", "serial port", "serial_api.h", "serial.attach", "serial.getc()", "Serial.h", "serial.readable()", "SerialHalfDuplex", "SerialPC", "server", "service", "servlet", "Servo", "servos", "set", "set_link()", "setting", "SETUP.cpp", "SHA", "Shared resources", "Sharing", "Sharp", "Sheet", "shield", "shirt", "shock", "shoes", "shopping", "short", "shortcut", "show", "Show/hide", "SID", "SIFT", "signal", "signal processing", "Signals", "signature", "SiliconSensingDMU", "SIM", "SIM900", "SimpeSerialProtocol", "SimpleSocket", "Simplicity", "SimplicityStudio", "Simulator", "Simulink", "sin", "single axis", "single thread", "single-step", "sink", "siri", "size", "slave", "Sleep", "SLIP", "slow", "slow clock rate", "slow GPIO", "smart", "smartphone", "smd", "SMS", "SMS shoulder tap", "SMT", "SMTP", "SNES", "SNIFFER", "snip", "snippets", "SNMP", "SNMP;", "socket", "sockets", "Sof_event", "softdevice", "software", "software Uart", "solar", "solaris", "some", "sorry", "sound", "SoundRecorder", "source", "source code", "sourcery", "Sourcery;", "SP14Q002", "space", "spaces", "sparkfun", "SparkFun MicroSD Breakout Board", "Spartan 3E", "SPDIF", "speaker", "specification", "Speed", "SPI", "spi 10mhz", "SPI input", "SPI master", "SPI Slave", "SPI3", "spice", "SPISlave", "spree", "SQL", "SQLite", "square", "sram", "SRF08", "ssb", "sscanf", "SSD1963", "SSH", "SSI", "SSL", "SSP", "SST", "ST", "ST Nucleo F072RB", "ST Nucleo F302R8", "ST Nucleo F401RE", "ST Nucleo F411RE", "ST Nucleo L053R8", "st7580", "stable", "stack", "Stamp", "standalone", "standard", "star", "StarBoard", "start", "starter", "starters", "startup", "State", "State Machine", "state machines", "statement", "static", "status", "std:string", "stderr", "stdio", "stdout", "STEM", "Step", "step direction", "Stepper", "stepper motor", "Stick", "STM", "stm32", "STM32 Bugs", "STM32F", "stm32F030", "stm32f030k6", "STM32F1", "STM32F103", "STM32F103C8T6", "STM32F103CT6", "STM32F103RB", "STM32F3", "STM32F4", "STM32F401RE", "STM32F407", "STM32F407VET6", "STM32F411RE", "stm32f42", "STM32F429", "STM32F446", "STM32F469", "STM32F4xx", "STM32F7", "STM32F746", "stm32f767", "stm32l0", "STM32L1", "STM334", "stop", "stop bit", "stops working", "storage", "strange", "Strange Error", "strcpy", "stream", "stretching", "string", "strtod", "strtof", "strtol", "structures", "student", "Studio", "suart", "Subscriptions", "substr", "suggestion", "suggestions", "SumoBot", "super", "super capacitor", "supply", "Support", "SURF", "survey", "suspend", "SVC", "svn", "SWD", "switch", "switcher", "SWL", "SX1272", "SX1272MB2xAS", "SX1276", "symbols", "sync", "synchronize", "Syncronised", "Synergy", "syntax", "synth", "synthesizer", "System", "SystemInit", "SysTick", "t-shirt", "tab", "table", "tabs", "Tag", "tai", "talkie", "target", "task", "task number", "TCP", "tcp/ip", "TCP/IP over VCP", "TCPS", "TCPSocket", "TCPSocketConnection", "TCPSocketServer", "team", "teensy", "Telemetry", "Telnet", "Telnet server", "Temperature", "Template", "tera", "Tera Term", "TeraTerm", "term", "Terminal", "test", "Testbed", "testing", "text", "TextLCD", "TextStar", "TFT", "the", "thermoelectric", "things", "thread", "Thread.start", "threads", "TI", "Ticker", "ticks", "time", "time saving or time consuming", "time-triggered", "timeline", "Timeout", "timer", "timer2", "timer3", "timers", "timing", "TINF", "Tiny Webserver", "tinyclr", "tip", "Tiva", "tlc5940", "TLS", "TLV1572", "TLV320", "TMP102", "to", "to?", "Toggle", "tolerant", "tollos", "toolchain", "toolchain;", "touch", "touch input", "touchpad", "Touchscreen", "tracker", "training", "Transceivers", "transfer", "transfer speed", "translation", "translator", "transmit", "travail", "tri-state", "triac", "trigger", "Trigonometric", "trimble", "troub", "troubleshooting", "try catch", "TSL2560", "TSL2561", "TTL", "ttyACM0", "turn", "tutorial", "twitter", "TwitterExample", "Two", "Tx", "txt", "TY51822r3", "typedef", "typos", "u-blox", "uA", "UART", "UART0", "uartsb", "uav", "ubertooth", "ublox", "Ubuntu", "UDP", "UDPSocket", "UIPEthernet", "ultrasonic", "UM6", "uml", "umts", "UMTSStick", "undefined", "undo", "unicode", "unique", "unistd", "unit", "unix", "Unknown", "unlock", "unmount", "unresponsive", "unseren", "unsigned int", "unstable", "update", "updates", "UPGRADE", "Upload", "uploading", "UPnP", "url", "usability", "usage", "usart", "USB", "USB connector", "USB device", "USB Host", "USB memory", "USB MSC", "usb prober", "USB to CAN", "USB_CDC_MSD_Hello", "USB_MSD", "USB_VBUS", "USB-stick", "USB2CAN", "USB3.0", "USBA", "USBB", "usbcdc", "USBD480", "USBDAC", "USBDevice", "USBHID", "USBHOST", "USBHostDac_example", "USBHostMSD", "USBIsochronous", "USBKeyboard", "USBMIDI", "USBMouse", "USBMSD", "usbrx", "usbserial", "usbtx", "USBUDCAH", "USBカメラ", "use", "user", "username", "users", "utf 8", "utf-8", "UUID", "uV5", "UVC;", "uvision", "uvisor", "V OUT", "Valid", "variable", "variable allocation", "variables", "vars", "VB", "VB.NET", "VB6", "VCP", "vector", "vector.cc", "vehicle", "Venus", "verification", "verify", "version", "version control", "VGA", "vibration", "vibration detection", "VID", "video", "Vin", "virtual", "Virtual comm port over STLink", "virtual disk", "virus", "visa", "vista", "Visual", "Visual Basic", "Visual Studio", "visualgdb", "VMWare", "Vodafone", "Vodafonemodem", "voich", "volatile", "voltage", "volume", "volunteer", "VOUT", "vprintf", "VSYNC", "VU", "w5100", "W5500", "W5UXH", "wait", "wait_us", "wait()", "wake on LAN", "wake on movement", "wake on SMS", "wake up", "wakeup", "walkie", "wallbot", "warning", "warnings", "watchdog", "wav", "wave", "WavePlayer", "wchar", "WDT", "we", "weak", "wearable", "weather", "Web", "webfs", "webserver", "website", "WebSocket", "Websockets", "What", "wheel", "while loop", "while(1)", "Wi-Fi", "WiConnect", "width", "wifi", "WiFly", "Wii", "Wii60", "wiimote", "wiki", "William", "Win10", "Win2000", "win7", "Win8.1", "wind", "window", "windows", "Windows serial configuration", "Windows Serial Driver", "Windows10", "windows7", "Windows8", "wireless", "wiring", "wirless", "wirstband", "with", "Wixel", "Wiznet", "WonderGecko", "work", "workflow", "working", "workshop", "workspace", "world", "write", "writeable", "writer", "wrong", "ws2801", "wt32", "wtf", "wwdt", "WYSIWYG", "X", "x_Nucleo_PLC01A1", "X-10", "X-Nucleo", "X-NUCLEO-IHM07M1", "X-NUCLEO-IKS01A1", "X.509 Error", "xbeat", "xbee", "XBeePro", "Xbox", "Xbox 360", "xively", "xml", "XP", "Xpresso", "XTAL", "y5design", "YEI", "yellow", "yosemite", "yotta", "You Tube", "ZeroG", "zigbee", "zip", "zip export", "Zumo"], {
+                width: 150,
+                max: 10,
+                multiple: true,
+                multipleSeparator: ",",
+                scroll: true,
+                scrollHeight: 300,
+            });
+            </script>
+                </td>
+            </tr>
+            
+            <tr><td>
+                <input type="submit" name="submit" class="button large" style="font-weight: bold; margin-top: 5px;" value="Post new topic"> &nbsp;
+                <input type="button" href="#" onclick="return false;" id="preview" class="button secondary" value="Show preview">  <span id="loading"></span> &nbsp;
+            </td></tr>
+        </tbody></table>
+    </form>
+</div>
+
+                
+            
+        
+
+
+        
+            <h2><a name="questions"> </a><a href="https://developer.mbed.org/platforms/Teensy-3-1/#questions">Questions</a></h2>
+            
+                
+                    
+                        <div class="question">
+                            <a href="https://developer.mbed.org/questions/74731/Teensy-3536/" style="color: inherit !important;">
+                                <div class="stats">
+                                    
+                                    <div class="answers" style="background:#d7eaef;" title="This question has 1 answers.">
+                                    
+
+                                        <div class="qstat">1</div>
+                                        answers
+                                    </div>
+                                </div>
+                            </a>
+
+                            
+
+                            <a href="https://developer.mbed.org/questions/74731/Teensy-3536/" class="title" title="How long does it take to see the compatibility with the two new boards?
+Thanks">
+                                Teensy 3.5/3.6
+                            </a>
+
+                            <span class="qdata">
+                                <span class="authortext"><a href="https://developer.mbed.org/users/urbanspaceman/"><img alt="" class="icon" width="16px" height="16px" src="./Teensy 3.1 _ mbed_files/default_profile.jpg.16x16_q85_crop-center.jpg"></a> <a href="https://developer.mbed.org/users/urbanspaceman/"> Francesco Mulassano</a></span> <br>
+                                <abbr title="Thu 13 Oct 2016 20:34">6&nbsp;months, 1&nbsp;week ago</abbr>
+                            </span>
+
+                            <p class="tags">
+                            
+                                <i class="fa fa-tag" aria-hidden="true"></i>
+                                
+                                <a href="https://developer.mbed.org/questions/tag/Teensy%203.5">Teensy 3.5</a>, 
+                                
+                                <a href="https://developer.mbed.org/questions/tag/Teensy%203.6">Teensy 3.6</a>
+                                
+                            
+                            </p>
+                        </div>
+                    
+                
+                    
+                        <div class="question">
+                            <a href="https://developer.mbed.org/questions/68987/Cannot-attache-ISRs-to-both-rising-and-f/" style="color: inherit !important;">
+                                <div class="stats">
+                                    
+                                    <div class="answers" style="opacity: 0.4;" title="This question has no answers.">
+                                    
+
+                                        <div class="qstat" style="color:#6B2B28;">0</div>
+                                        answers
+                                    </div>
+                                </div>
+                            </a>
+
+                            
+
+                            <a href="https://developer.mbed.org/questions/68987/Cannot-attache-ISRs-to-both-rising-and-f/" class="title" title="Hello,
+
+I have noticed an issue:
+
+When I attach interrupt service routines to BOTH rising and falling edges on the same pin, none of the servic...">
+                                Cannot attache ISRs to both rising and falling edges for the same pin
+                            </a>
+
+                            <span class="qdata">
+                                <span class="authortext"><a href="https://developer.mbed.org/users/salarian/"><img alt="" class="icon" width="16px" height="16px" src="./Teensy 3.1 _ mbed_files/default_profile.jpg.16x16_q85_crop-center.jpg"></a> <a href="https://developer.mbed.org/users/salarian/"> Alef Sin</a></span> <br>
+                                <abbr title="Sun 15 May 2016 15:52">11&nbsp;months, 1&nbsp;week ago</abbr>
+                            </span>
+
+                            <p class="tags">
+                            
+                                <i class="fa fa-tag" aria-hidden="true"></i>
+                                
+                                <a href="https://developer.mbed.org/questions/tag/3.1">3.1</a>, 
+                                
+                                <a href="https://developer.mbed.org/questions/tag/teensy">teensy</a>
+                                
+                            
+                            </p>
+                        </div>
+                    
+                
+                    
+                        <div class="question">
+                            <a href="https://developer.mbed.org/questions/68986/PWM-frequency-is-wrong/" style="color: inherit !important;">
+                                <div class="stats">
+                                    
+                                    <div class="answers" style="background:#d7eaef;" title="This question has 2 answers.">
+                                    
+
+                                        <div class="qstat">2</div>
+                                        answers
+                                    </div>
+                                </div>
+                            </a>
+
+                            
+
+                            <a href="https://developer.mbed.org/questions/68986/PWM-frequency-is-wrong/" class="title" title="Hi, 
+
+First of all, I love Teensy and I&#39;m very happy you support it in mbed!
+
+I have noticed an issue: when I configure a pin for PWM out, it w...">
+                                PWM frequency is wrong
+                            </a>
+
+                            <span class="qdata">
+                                <span class="authortext"><a href="https://developer.mbed.org/users/salarian/"><img alt="" class="icon" width="16px" height="16px" src="./Teensy 3.1 _ mbed_files/default_profile.jpg.16x16_q85_crop-center.jpg"></a> <a href="https://developer.mbed.org/users/salarian/"> Alef Sin</a></span> <br>
+                                <abbr title="Mon 16 May 2016 19:29">11&nbsp;months, 1&nbsp;week ago</abbr>
+                            </span>
+
+                            <p class="tags">
+                            
+                                <i class="fa fa-tag" aria-hidden="true"></i>
+                                
+                                <a href="https://developer.mbed.org/questions/tag/3.1">3.1</a>, 
+                                
+                                <a href="https://developer.mbed.org/questions/tag/teensy">teensy</a>
+                                
+                            
+                            </p>
+                        </div>
+                    
+                
+                    
+                        <div class="question">
+                            <a href="https://developer.mbed.org/questions/61222/teensy-32/" style="color: inherit !important;">
+                                <div class="stats">
+                                    
+                                    <div class="answers" style="background:#B2EEB2;" title="This question has been solved.">
+                                    
+
+                                        <div class="qstat">1</div>
+                                        answers
+                                    </div>
+                                </div>
+                            </a>
+
+                            
+                                <i class="fa fa-check" aria-hidden="true" title="This question has been solved"></i>
+                            
+
+                            <a href="https://developer.mbed.org/questions/61222/teensy-32/" class="title" title="hi,
+
+Can I use this on teensy 3.2?">
+                                teensy 3.2
+                            </a>
+
+                            <span class="qdata">
+                                <span class="authortext"><a href="https://developer.mbed.org/users/Yoobe/"><img alt="" class="icon" width="16px" height="16px" src="./Teensy 3.1 _ mbed_files/default_profile.jpg.16x16_q85_crop-center.jpg"></a> <a href="https://developer.mbed.org/users/Yoobe/"> Baris Ersezer</a></span> <br>
+                                <abbr title="Sun 18 Oct 2015 05:47">1&nbsp;year, 6&nbsp;months ago</abbr>
+                            </span>
+
+                            <p class="tags">
+                            
+                                <i class="fa fa-tag" aria-hidden="true"></i>
+                                
+                                <a href="https://developer.mbed.org/questions/tag/3.1">3.1</a>, 
+                                
+                                <a href="https://developer.mbed.org/questions/tag/teensy">teensy</a>
+                                
+                            
+                            </p>
+                        </div>
+                    
+                
+                    
+                        <div class="question">
+                            <a href="https://developer.mbed.org/questions/54873/Good-Work/" style="color: inherit !important;">
+                                <div class="stats">
+                                    
+                                    <div class="answers" style="background:#d7eaef;" title="This question has 1 answers.">
+                                    
+
+                                        <div class="qstat">1</div>
+                                        answers
+                                    </div>
+                                </div>
+                            </a>
+
+                            
+
+                            <a href="https://developer.mbed.org/questions/54873/Good-Work/" class="title" title="Hi:
+
+  I have been using offline toolchain with GCC_ARM, it is good that the online version. Thanks for the work.
+
+The original Teensy 3.1 pino...">
+                                Good Work
+                            </a>
+
+                            <span class="qdata">
+                                <span class="authortext"><a href="https://developer.mbed.org/users/yoonghm/"><img alt="" class="icon" width="16px" height="16px" src="./Teensy 3.1 _ mbed_files/default.jpg.16x16_q85_crop-center.jpg"></a> <a href="https://developer.mbed.org/users/yoonghm/"> HM Yoong</a></span> <br>
+                                <abbr title="Sat 25 Jul 2015 14:11">1&nbsp;year, 9&nbsp;months ago</abbr>
+                            </span>
+
+                            <p class="tags">
+                            
+                                <i class="fa fa-tag" aria-hidden="true"></i>
+                                
+                                <a href="https://developer.mbed.org/questions/tag/3.1">3.1</a>, 
+                                
+                                <a href="https://developer.mbed.org/questions/tag/teensy">teensy</a>
+                                
+                            
+                            </p>
+                        </div>
+                    
+                
+
+                
+
+            
+        
+    </div>
+</div>
+
+
+
+    </div>
+
+    <div class="three columns sidebar ">
+        
+    <div class="panel promote">
+        <div class="row">
+            <div class="two columns">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+                </span>
+            </div>
+            <div class="ten columns">
+                <p class="promote-text toolbox">To compile a program for this board, use <span class="" style=" font-weight:600;">teensy3_1</span> as the target name. </p>
+            </div>
+        </div>
+    </div>
+    <div class="panel statspanel">
+        <h5 class="subheader">Board Partner</h5>
+
+        
+              <a href="https://developer.mbed.org/teams/CommunityContributors/">
+              
+                    <img src="./Teensy 3.1 _ mbed_files/creativeCommons.png.250x250_q85.png" width="250" height="250">
+              </a>
+              <h3><a href="https://developer.mbed.org/teams/CommunityContributors/">CommunityContributors</a></h3>
+              <p>We the people love mbed and want to help it grow</p>
+        
+
+    </div>
+
+    
+        <div class="panel statspanel">
+            <h5 class="subheader">Silicon Partner</h5>
+            <a href="https://developer.mbed.org/teams/NXP/">
+                
+                    <img src="./Teensy 3.1 _ mbed_files/NXP_logo_RGB_web.png.250x250_q85.jpg" width="250" height="95">
+            </a>
+            <h3><a href="https://developer.mbed.org/teams/NXP/">NXP</a></h3>
+            <p>NXP is a leading semiconductor company founded by Philips more than 50 years ago. </p>
+        </div>
+    
+
+    <div class="panel statspanel">
+        
+            
+        <p align="center">
+            <a class="button" href="https://developer.mbed.org/platforms/Teensy-3-1/add/"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp; Add to your mbed Compiler</a>
+        </p>
+            
+        
+
+    
+        
+        <p align="center">
+            <a class="button" href="https://www.pjrc.com/store/teensy31.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Buy Now</a>
+        </p>
+        
+   
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+
+    </div>
+</div>
+
+
+    <div class="row footer hide-on-print">
+        <div class="twelve columns">
+            <hr>
+            <ul>
+                <li>© mbed</li>
+                <li><a href="https://developer.mbed.org/blog">blog</a></li>
+                <li><a href="https://developer.mbed.org/handbook/Jobs">we're hiring!</a></li>
+                <li><a href="https://developer.mbed.org/handbook/Help">support</a></li>
+                <li><a href="https://developer.mbed.org/handbook/Service-status">service status</a></li>
+                <li><a href="https://developer.mbed.org/privacy">privacy policy</a></li>
+                <li><a href="https://developer.mbed.org/terms">terms and conditions</a> </li>
+            </ul>
+       </div>
+	</div>
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./Teensy 3.1 _ mbed_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-1447836-8");
+
+pageTracker._setCustomVar(1, 'User Type', 'Guest', 2);
+
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+
+
+
+
+<div id="cookiemodule" style="display: none;">
+    <div class="modouter">
+        <div class="modinner">
+            <h5>Important information</h5>
+            <div class="modcontent">
+                <div class="intro">
+                    <p>This site uses cookies to store information on your computer. By continuing to use our site, you consent to our
+                    <a href="https://developer.mbed.org/privacy/">cookies</a>.</p>
+                </div>
+                <div class="modopen">
+                    <p></p><p style="margin: 0cm 0cm 0pt">ARM websites use two types of cookie: (<strong>1)</strong> those that enable the site to function and perform as required; and <b>(2)</b> analytical cookies which anonymously track visitors only while using the site. If you are not happy with this use of these cookies please review our <a target="_self" href="https://developer.mbed.org/privacy/">Privacy Policy</a> to learn how they can be disabled. By disabling cookies some features of the site will not work.</p><p></p>
+                </div>
+                <button class="readmore">Read More</button>
+                <button class="accept" id="">accept and hide this message</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    // cookie functions
+    // based on http://www.quirksmode.org/js/cookies.html
+    function create(name, value, days, path, domain) {
+        path = typeof path !== 'undefined' ? path : '/';
+        domain = typeof domain !== 'undefined' ? '; domain=' + domain : '';
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            var expires = "; expires=" + date.toGMTString();
+        } else {
+            var expires = "";
+        }
+        document.cookie = name + "=" + value + expires + domain + "; path=" + path;
+    }
+    function read(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    function erase(name) {
+        create(name, "", -1);
+    }
+
+    create('testCookies', 'yes', 365, '/', '.mbed.org');
+    if (read("testCookies") == 'yes' && read("acceptCookies") != 'yes') {
+        jQuery('#cookiemodule').css('display', 'block');
+        jQuery('button.readmore').click(function() {
+            jQuery('.modopen').slideToggle('slow');
+            if (jQuery(this).text() == "Read More") {
+                jQuery(this).text("Read Less");
+            } else {
+                jQuery(this).text("Read More");
+            };
+        });
+
+        jQuery('button.accept').click(function() {
+            create('acceptCookies', 'yes', 365, '/', '.mbed.org');
+            jQuery('#cookiemodule').fadeOut('slow');
+        });
+
+        jQuery('button.close').click(function() {
+            jQuery('#cookiemodule').fadeOut('slow');
+        });
+    }
+});
+</script>
+
+
+<div id="flag-content" class="reveal-modal small">
+    <h2>Report Content</h2>
+    <a class="close-reveal-modal">×</a>
+    <form action="https://developer.mbed.org/platforms/Teensy-3-1/" method="post" id="flag-content-form">
+        <input type="hidden" name="csrfmiddlewaretoken" value="o8ZbElzKi9XEuscBlR0sM3GBEpg4i8kg">
+        <ul>
+            <li>
+                <label for="id_reason_1">
+                    <input id="id_reason_1" name="reason" type="radio" value="1">
+                    Spam
+                </label>
+            </li>
+            <li>
+                <label for="id_reason_2">
+                    <input id="id_reason_2" name="reason" type="radio" value="2">
+                    Inappropriate
+                </label>
+            </li>
+        </ul>
+        <a class="button secondary cancel-flag">Cancel</a>
+        <input type="submit" value="Report" class="button">
+    </form>
+</div>
+
+<div id="access-warning-modal" class="reveal-modal">
+    <h2>Access Warning</h2>
+    <p>You do not have the correct permissions to perform this operation. Please, contact us at support@mbed.com to gain full access.</p>
+    <a class="close-reveal-modal">×</a>
+</div>
+
+
+
+
+</body></html>
