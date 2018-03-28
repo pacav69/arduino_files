@@ -1,0 +1,13 @@
+Technical specs
+Microcontroller	ESP-32
+Operating Voltage	3.3V
+Digital I/O Pins	26
+Analog Input Pins	12
+Clock Speed(Max)	240Mhz
+Flash	4M bytes
+Length	58mm
+Width	25.4mm
+Weight	5.8g
+Pin
+Battery Connector: PH-2 2.0mm
+All of the IO pins run at 3.3V.
