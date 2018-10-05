@@ -1,4 +1,5 @@
 Additional boards
+Boards Manager
 
 
 https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manager/package_sparkfun_index.json
@@ -9,3 +10,5 @@ https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/packa
 https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json
 https://mcudude.github.io/MegaCore/package_MCUdude_MegaCore_index.json
 https://git.oschina.net/dfrobot/FireBeetle-ESP32/raw/master/package_esp32_index.json
+https://dl.espressif.com/dl/package_esp32_dev_index.json
+https://cytrontechnologies.github.io/package_cytron_makeruno_index.json
