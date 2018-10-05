@@ -3,6 +3,7 @@
 
 ## Hexcode for colors
 http://www.javascripter.net/faq/rgbtohex.htm
+
 https://www.rapidtables.com/web/color/green-color.html
 
 ## File locations:
@@ -58,4 +59,16 @@ increased linestatus.height to 30
 	# LINE STATUS - editor line number status bar at the bottom of the screen
 	linestatus.font	   = SansSerif,plain,14
 	linestatus.height  = 30
+
+[wiki](https://github.com/arduino/Arduino/wiki/Using-Zip-files-for-themes)
+
+More info [ThemeTest](https://github.com/per1234/ThemeTest)
+
+![<error message color lawngreen #7CFC00 >](<https://github.com/pacav69/arduino_files/blob/master/Notes/arduino_ide_color/errormessageinarduinoide.png>)
+
+you could also copy this file to the theme directory
+[theme.txt_visually_improved pacav.zip](https://github.com/arduino/Arduino/files/2449671/theme.txt_visually_improved.pacav.zip)
+
+
+
 
